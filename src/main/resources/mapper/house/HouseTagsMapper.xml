@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icloud.house.dao.HouseTagsMapper">
+
+    <!-- 基础map -->
+    <resultMap type="com.icloud.house.model.HouseTags" id="BaseResultMap">
+     <id property="id" column="id"/>
+     <result property="标签名称" column="标签名称"/>
+     <result property="状态" column="状态"/>
+    </resultMap>
+
+   <!-- 基础字段列 -->
+   <sql id="Base_Column_List" >
+id,标签名称,状态
+    </sql>
+</mapper>
