@@ -51,10 +51,12 @@
             <form action="${request.contextPath}/backpage/houseHousing/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum}">
+                    <#--
                      <li> 名称： <input type="text" name="name" id="name"  value="${page.pageNum}" placeholder="" autocomplete="off" ></li>
                      </li>
                      <li>开始时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="startTime" name="startTime" value="${(start)!''}"></li>
                      <li>结束时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endTime" name="endTime" value="${(end)!''}"></li>
+                     -->
                      <li><button id="search" >查询</button></li>
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
@@ -71,79 +73,27 @@
                 <table class="site-table table-hover">
                     <thead>
                         <tr>
-                         <th></th>
+                         <th>编号</th>
                          <th>标题</th>
-                         <th>最低总售价</th>
-                         <th>最高总售价</th>
-                         <th>最低单价</th>
-                         <th>最高单价</th>
-                         <th>均价</th>
-                         <th>最低总面积</th>
-                         <th>最高总面积</th>
-                         <th>所属楼层</th>
-                         <th>分类（1、写字楼、2 新房 3、共享办公、4租房）</th>
-                         <th>状态 上架 下架（0下架、1上架）</th>
-                         <th>文字详情</th>
-                         <th>图片详情</th>
-                         <th>所在小区</th>
-                         <th>地址</th>
-                         <th>房源，房屋来源(1房东、2中介)</th>
-                         <th>租房方式(0整租，1合租) </th>
-                         <th>建筑面积（新楼盘需要）</th>
-                         <th>开盘时间（新楼盘需要）</th>
-                         <th>入住时间（新楼盘需要）</th>
-                         <th>经度</th>
-                         <th>维度</th>
-                         <th>省</th>
-                         <th>市</th>
-                         <th>县、区</th>
-                         <th>乡、镇</th>
-                         <th>发布人ID</th>
-                         <th>标签</th>
-                         <th>特色</th>
-                         <th>装修</th>
-                         <th>房型</th>
-                         <th>物业类型</th>
+                         <th>分类</th>
+                         <th>状态</th>
                         <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
                     <#list page.list as t>
                         <tr>
-                         <td>${t.id!''}</td>
                          <td>${t.title!''}</td>
-                         <td>${t.minTotalPrice!''}</td>
-                         <td>${t.maxTotalPrice!''}</td>
-                         <td>${t.minUnitPrice!''}</td>
-                         <td>${t.maxUnitPrice!''}</td>
-                         <td>${t.averagePriice!''}</td>
-                         <td>${t.minHouseArea!''}</td>
-                         <td>${t.maxHouseArea!''}</td>
-                         <td>${t.storey!''}</td>
-                         <td>${t.houseType!''}</td>
-                         <td>${t.status!''}</td>
-                         <td>${t.describes!''}</td>
-                         <td>${t.introductionDetail!''}</td>
-                         <td>${t.village!''}</td>
-                         <td>${t.addesses!''}</td>
-                         <td>${t.houseSources!''}</td>
-                         <td>${t.rentWay!''}</td>
-                         <td>${t.buildArea!''}</td>
-                         <td>${t.openDate!''}</td>
-                         <td>${t.intoDate!''}</td>
-                         <td>${t.lng!''}</td>
-                         <td>${t.lat!''}</td>
-                         <td>${t.province!''}</td>
-                         <td>${t.city!''}</td>
-                         <td>${t.county!''}</td>
-                         <td>${t.towns!''}</td>
-                         <td>${t.pubUser!''}</td>
-                         <td>${t.tags!''}</td>
-                         <td>${t.features!''}</td>
-                         <td>${t.fitup!''}</td>
-                         <td>${t.houseClasss!''}</td>
-                         <td>${t.propertyType!''}</td>
-            
+                         <td>
+                            <#if test="t.houseType==1">写字楼</#if>
+                            <#if test="t.houseType==2">新房</#if>
+                            <#if test="t.houseType==3">共享办公</#if>
+                            <#if test="t.houseType==4">租房</#if>
+                         </td>
+                         <td>
+                             <#if test="t.status==0">下架</#if>
+                             <#if test="t.status==1">上架</#if>
+                         </td>
                             <th>
                             <div class="layui-btn-group">
                                  <a href="javascript:toEdit(${(t.id)!''})"  class="layui-btn layui-btn-mini">修改</a>
