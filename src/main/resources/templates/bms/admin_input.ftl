@@ -66,17 +66,7 @@
 				      <input type="checkbox" name="roleId" title="${role.roleName}" value="${role.id}"  <#if role.isHas==true>checked </#if> >
 				</#list>
 			    </blockquote>
-			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-				<legend style="font-size: 16px;">关联店铺</legend>
-			    </fieldset>
-				<blockquote class="layui-elem-quote layui-quote-nm">
 
-				<#list shopList as shop>
-				      <input type="checkbox" name="shopId" title="${shop.shopName}" value="${shop.id}"  <#if shop.hasAuthority==true>checked </#if> >
-				</#list>
-			    </blockquote>
-			
-			
 				<div class="layui-form-item">
 					<div class="layui-input-block">
 						<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>

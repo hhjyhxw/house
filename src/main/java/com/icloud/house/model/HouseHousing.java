@@ -12,7 +12,7 @@ import java.util.Date;
  * 
  * @author Mr.Z
  * @email 512162086@qq.com
- * @date 2019-11-01 21:46:51
+ * @date 2019-11-04 10:13:30
  */
 @TableName("t_house_housing")
 public class HouseHousing implements Serializable {
@@ -114,9 +114,33 @@ public class HouseHousing implements Serializable {
    	   	   /* 房型 */
        @TableField("house_classs")
        private String houseClasss;
+   	   	   /* 特价房（0否，1是） */
+       @TableField("specifyes")
+       private String specifyes;
+   	   	   /* 最新（0否，1是） */
+       @TableField("latest")
+       private String latest;
    	   	   /* 物业类型 */
        @TableField("property_type")
        private String propertyType;
+
+    /* 是否可以租(0不可以组,1可以组) */
+    @TableField("rentable")
+    private String rentable;
+
+    /* 创建时间 */
+    @TableField("create_time")
+    private Date createTime;
+    /* 更新人 */
+    @TableField("modify_man")
+    private Long modifyMan;
+    /* 更新时间 */
+    @TableField("modify_time")
+    private Date modifyTime;
+    /* 创建人 */
+    @TableField("create_man")
+    private Long createMan;
+
    	
 	/**
 	 * 设置：
@@ -503,6 +527,30 @@ public class HouseHousing implements Serializable {
 		return houseClasss;
 	}
 	/**
+	 * 设置：特价房（0否，1是）
+	 */
+	public void setSpecifyes(String specifyes) {
+		this.specifyes = specifyes;
+	}
+	/**
+	 * 获取：特价房（0否，1是）
+	 */
+	public String getSpecifyes() {
+		return specifyes;
+	}
+	/**
+	 * 设置：最新（0否，1是）
+	 */
+	public void setLatest(String latest) {
+		this.latest = latest;
+	}
+	/**
+	 * 获取：最新（0否，1是）
+	 */
+	public String getLatest() {
+		return latest;
+	}
+	/**
 	 * 设置：物业类型
 	 */
 	public void setPropertyType(String propertyType) {
@@ -514,4 +562,44 @@ public class HouseHousing implements Serializable {
 	public String getPropertyType() {
 		return propertyType;
 	}
+
+    public String getRentable() {
+        return rentable;
+    }
+
+    public void setRentable(String rentable) {
+        this.rentable = rentable;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Long getModifyMan() {
+        return modifyMan;
+    }
+
+    public void setModifyMan(Long modifyMan) {
+        this.modifyMan = modifyMan;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public Long getCreateMan() {
+        return createMan;
+    }
+
+    public void setCreateMan(Long createMan) {
+        this.createMan = createMan;
+    }
 }

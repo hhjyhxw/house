@@ -48,9 +48,10 @@ public class PermissionsInterceptor implements HandlerInterceptor {
 
 		HttpSession session = request.getSession();
 		Object obj = session.getAttribute("admin_user");
-		printlnVisitInfo(request,handler);
+//		printlnVisitInfo(request,handler);
 		if(null==obj){
-			response.sendRedirect("/hyzypay/tologin");
+//			response.sendRedirect("/hyzypay/tologin");
+            response.sendRedirect("/tologin");
 			return false;
 		}
 		return true;

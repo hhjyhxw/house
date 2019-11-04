@@ -58,13 +58,11 @@
                      <li>结束时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endTime" name="endTime" value="${(end)!''}"></li>
                      -->
                      <li><button id="search" >查询</button></li>
-                     <#--
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
                             <i class="layui-icon">&#xe61f;</i> 添加
                        </a>
                      </li>
-                     -->
                  </ul>
             </form>
         </fieldset>

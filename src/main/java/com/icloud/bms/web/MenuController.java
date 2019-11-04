@@ -100,7 +100,7 @@ public class MenuController extends AdminBaseController<BmsMenu> {
 	 */
 	@RequestMapping("/menu_input")
 	public String input(HttpServletRequest request,HttpServletResponse response,
-			Integer id,Integer parentId,Integer sortNum) throws Exception{
+			Integer id,Integer parentId,Integer sortNum,BmsMenu bmsMenu) throws Exception{
 		
 		String menuName = request.getParameter("menuName");
 		String menuUrl = request.getParameter("menuUrl");

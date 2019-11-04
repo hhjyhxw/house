@@ -3,11 +3,13 @@ import com.github.pagehelper.PageInfo;
 import com.icloud.annotation.SysLog;
 import com.icloud.basecommon.model.Query;
 import com.icloud.basecommon.service.MybaseServiceImpl;
+import com.icloud.bms.model.BmsAdmin;
 import com.icloud.common.msg.BaseResponse;
 import com.icloud.common.msg.TableResultResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -120,5 +122,12 @@ public abstract class BaseIdLongController<B extends MybaseServiceImpl,T>{
         }
     }
 
+    public BmsAdmin getLoginAdmin(){
+        Object obj = request.getSession().getAttribute("admin_user");
+        if (obj!=null){
+            return (BmsAdmin) obj;
+        }
+        return null;
+    }
 
 }

@@ -6,6 +6,8 @@ import com.icloud.basecommon.service.MybaseServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * 
  * @author Mr.Z
@@ -16,4 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class HouseAreaService extends MybaseServiceImpl<HouseAreaMapper,HouseArea> {
 
+    public List<HouseArea> getList(){
+       return super.list();
+    }
 }
