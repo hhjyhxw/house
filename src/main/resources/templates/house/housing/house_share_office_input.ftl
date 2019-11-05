@@ -139,7 +139,7 @@
               </div>
             </div>
         -->
-        
+
          <div class="layui-form-item">
             <label class="layui-form-label">文字详情</label>
             <div class="layui-input-inline" style="width:70%">

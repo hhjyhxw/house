@@ -23,4 +23,8 @@ import java.util.Map;
 @Transactional
 public class WxUserService extends MybaseServiceImpl<WxUserMapper,WxUser> {
 
+    public WxUser findByUnionId(String unionId) {
+        return null;
+    }
+
 }

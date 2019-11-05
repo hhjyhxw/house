@@ -24,6 +24,9 @@ public class InterceptorStack {
 //			registry.addInterceptor(new XssCsrfInterceptor()).addPathPatterns("/**").excludePathPatterns("/thirdInterfacePath/**")
 //					.excludePathPatterns("/beanGoods/goodsDetail").excludePathPatterns("/checkToken/removeToken")
 //					.excludePathPatterns("/backpage/setting/beforeUpdate").excludePathPatterns("/backpage/setting/update");
+            registry.addInterceptor(new PermissionsInterceptor()).addPathPatterns("/xcxpath/**")
+                    .excludePathPatterns("/thirdInterfacePath/xcxUserLogin/**");
+
 		    registry.addInterceptor(new PermissionsInterceptor()).addPathPatterns("/admin/**").addPathPatterns("/backpage/**");
 //			registry.addInterceptor(new AddTokenInterceptor()).addPathPatterns("/beanGoods/goodsDetail");
 //		    registry.addInterceptor(new RemoveTokenInterceptor()).addPathPatterns("/checkToken/removeToken");
