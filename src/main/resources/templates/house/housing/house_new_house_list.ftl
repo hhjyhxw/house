@@ -48,12 +48,24 @@
         <div style="margin:0 auto;width:100%;">
         <fieldset class="layui-elem-field">
              <legend>查询条件</legend>
-            <form action="${request.contextPath}/backpage/houseHousing/list" id="formId" style="padding-left:33px;">
+            <form action="${request.contextPath}/backpage/officeBuilding/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum}">
-                    <#--
-                     <li> 名称： <input type="text" name="name" id="name"  value="${page.pageNum}" placeholder="" autocomplete="off" ></li>
-                     </li>
+
+                     <li> 标题： <input type="text" name="title" id="title"  value="${(record.title)!}" placeholder="" autocomplete="off" ></li>
+                   <li> 区域：
+                    <select name="village" id="village">
+                      <option value="">--请选择--</option>
+                        <#if arenList??>
+                            <#list arenList as areaObj>
+                                <option value="${areaObj.areanName}"  <#if (record.village)?? && record.village==areaObj.areanName>selected="selected"</#if>>${areaObj.areanName}</option>
+                            </#list>
+                        </#if>
+                    </select>
+                    </li>
+
+
+                     <#--
                      <li>开始时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="startTime" name="startTime" value="${(start)!''}"></li>
                      <li>结束时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endTime" name="endTime" value="${(end)!''}"></li>
                      -->
@@ -76,6 +88,7 @@
                          <th>编号</th>
                          <th>标题</th>
                          <th>分类</th>
+                         <th>所属区域</th>
                          <th>状态</th>
                         <th>操作</th>
                         </tr>
@@ -83,16 +96,18 @@
                     <tbody>
                     <#list page.list as t>
                         <tr>
+                         <td>${t.id}</td>
                          <td>${t.title!''}</td>
                          <td>
-                            <#if test="t.houseType==1">写字楼</#if>
-                            <#if test="t.houseType==2">新房</#if>
-                            <#if test="t.houseType==3">共享办公</#if>
-                            <#if test="t.houseType==4">租房</#if>
+                            <#if (t.houseType==1)>写字楼</#if>
+                            <#if (t.houseType==2)>新房</#if>
+                            <#if (t.houseType==3)>共享办公</#if>
+                            <#if (t.houseType==4)>租房</#if>
                          </td>
+                          <td>${t.village!''}</td>
                          <td>
-                             <#if test="t.status==0">下架</#if>
-                             <#if test="t.status==1">上架</#if>
+                             <#if t.status==0>下架</#if>
+                             <#if t.status==1>上架</#if>
                          </td>
                             <th>
                             <div class="layui-btn-group">
@@ -154,11 +169,11 @@
         });
         //跳转新增
         $('#toAdd').on('click', function() {
-            window.location.href = "${request.contextPath}/backpage/houseHousing/toinput"
+            window.location.href = "${request.contextPath}/backpage/officeBuilding/toinput"
         });
         //跳转修改
         function toEdit(id){
-            window.location.href = "${request.contextPath}/backpage/houseHousing/toinput?id="+id;
+            window.location.href = "${request.contextPath}/backpage/officeBuilding/toinput?id="+id;
         }
         //删除
         layui.use(['layer'], function() {
@@ -167,13 +182,13 @@
         //删除
         function delById(id){
             if(confirm("删除了不能恢复,确定要删除？")){
-                var url = '${request.contextPath}/backpage/houseHousing/del';
+                var url = '${request.contextPath}/backpage/officeBuilding/del';
                 $.post(url, {
                     'id':id
                 }, function(data) {
                      if("0000"==data.code){
                         layer.msg("删除成功");
-                        window.location.href = "${request.contextPath}/backpage/houseHousing/list";
+                        window.location.href = "${request.contextPath}/backpage/officeBuilding/list";
                     }else{
                         layer.msg("删除失败");
                     }

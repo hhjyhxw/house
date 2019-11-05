@@ -66,7 +66,7 @@ public class HouseHousing implements Serializable {
    	   	   /* 地址 */
        @TableField("addesses")
        private String addesses;
-   	   	   /* 房源，房屋来源(1房东、2中介) */
+   	   	   /* 房源，房屋来源(0房东、1中介) */
        @TableField("house_sources")
        private Integer houseSources;
    	   	   /* 租房方式(0整租，1合租)  */
@@ -140,6 +140,11 @@ public class HouseHousing implements Serializable {
     /* 创建人 */
     @TableField("create_man")
     private Long createMan;
+
+    /* 封面图 */
+    @TableField("image_url")
+    private String imageUrl;
+
 
    	
 	/**
@@ -601,5 +606,13 @@ public class HouseHousing implements Serializable {
 
     public void setCreateMan(Long createMan) {
         this.createMan = createMan;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

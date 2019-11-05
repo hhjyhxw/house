@@ -21,7 +21,7 @@
 				<div class="layui-main">
 					<div class="admin-login-box">
 						<a class="logo" style="left: 0;" href="/admin">
-							<span style="font-size: 22px;">海韵系统管理</span>
+							<span style="font-size: 22px;">系统管理</span>
 						</a>
 						<div class="admin-side-toggle">
 							<i class="fa fa-bars" aria-hidden="true"></i>
@@ -81,8 +81,8 @@
 			</div>
 			<div class="layui-footer footer footer-demo" id="admin-footer">
 				<div class="layui-main">
-					<p>2017 &copy;
-						<a href="##" target="_blank">icloudsoft</a>
+					<p>2019 &copy;
+						<a href="##" target="_blank">msm</a>
 					</p>
 				</div>
 			</div>

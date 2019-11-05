@@ -2,43 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fbc680-6164-4f33-9b24-94a00587f493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseNewHouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseRentingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseShareOfficeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_renting_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/06378663b8804953af4c8a19f049a135.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/18bd7bb5af3c4c14b3c694e8053f81df.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/1e0b2ebf08a9470698f3c34ef70058ec.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/298d892769d74822882bfda9484078c2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/37a931a5a1dd4e3289af875a800db015.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/43d5e70bf5224185b8bd1400dcb9ed94.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/99441d04c59b4e5788cb73f9ed6fae46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/a89b5a62b1754942bca2403321417c47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/aa0ef19494eb44c8b4478075e27de705.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/b90b865d369b488596edb92685651fbd.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/c849a5fb32614bd694522237148116da.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/f5f1ab968c5c4f3db60ae712587ad088.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/f7e69563f6d64565a0ccb648fe3e3e8a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/e4ca2d1c046b45f39941649b100aed30.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/bms/web/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/bms/web/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseAreaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bms/admin_input.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bms/admin_input.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/06378663b8804953af4c8a19f049a135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/18bd7bb5af3c4c14b3c694e8053f81df.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/3221f381bbc8446aaab180d11d90035f.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/1e0b2ebf08a9470698f3c34ef70058ec.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/708963bb044647208d064408e48b8769.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/298d892769d74822882bfda9484078c2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/3b7e21be14fe4a108fdc23ad3ac1344b.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/37a931a5a1dd4e3289af875a800db015.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/817a92a6cb544f54b9630df35cfc40ca.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/43d5e70bf5224185b8bd1400dcb9ed94.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/99441d04c59b4e5788cb73f9ed6fae46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/a89b5a62b1754942bca2403321417c47.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/7adebaef69da496fb1e2bfa92dd719ad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/aa0ef19494eb44c8b4478075e27de705.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/b90b865d369b488596edb92685651fbd.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/90cb9d4c637b431891804bf120d8a461.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/c849a5fb32614bd694522237148116da.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/a03df6d097b14230a832b6cdee646dd0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/f5f1ab968c5c4f3db60ae712587ad088.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/uploadpath/c74e444b70ad4e01a08c37284e326584.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/20191104/f7e69563f6d64565a0ccb648fe3e3e8a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/20190619145101employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/2019061914employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/2019061915employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/2019062110employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/2019100815employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/money/2019062110employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/money/2019062111employeeDataImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/money/2019082114employeeMoneyImportResult.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploadpath/employee/money/2019100816employeeMoneyImportResult.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,122 +51,44 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="40" column="25" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="40" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="146" column="20" selection-end-line="288" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="221" column="7" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="182" column="24" lean-forward="true" selection-end-line="221" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_list.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/common/RandomValidateCodeUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="36" selection-start-line="36" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/GlobalExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="29" column="98" lean-forward="true" selection-start-line="29" selection-start-column="98" selection-end-line="29" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/apache-maven-3.3.1/repository/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="198" column="19" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
-              <folding>
-                <element signature="e#1776#1777#0" expanded="true" />
-                <element signature="e#1824#1825#0" expanded="true" />
-                <element signature="e#7496#7497#0" expanded="true" />
-                <element signature="e#7567#7568#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/apache-maven-3.3.1/repository/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/com/baomidou/mybatisplus/extension/toolkit/SqlHelper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-              <folding>
-                <element signature="e#1684#1685#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#10521#10522#0" expanded="true" />
-                <element signature="e#10554#10555#0" expanded="true" />
-                <element signature="e#10604#10605#0" expanded="true" />
-                <element signature="e#10648#10649#0" expanded="true" />
-                <element signature="e#10682#10683#0" expanded="true" />
-                <element signature="e#10714#10715#0" expanded="true" />
-                <element signature="e#10762#10763#0" expanded="true" />
-                <element signature="e#10804#10805#0" expanded="true" />
-                <element signature="e#10839#10840#0" expanded="true" />
-                <element signature="e#10872#10873#0" expanded="true" />
-                <element signature="e#10922#10923#0" expanded="true" />
-                <element signature="e#10966#10967#0" expanded="true" />
-                <element signature="e#11000#11001#0" expanded="true" />
-                <element signature="e#11032#11033#0" expanded="true" />
-                <element signature="e#11080#11081#0" expanded="true" />
-                <element signature="e#11122#11123#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="443">
+              <caret line="221" column="7" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -186,15 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>freemarker</find>
-      <find>settings</find>
-      <find>url</find>
-      <find>getImageUrlByMedia</find>
-      <find>svn</find>
-      <find>findForConditions</find>
-      <find>com.icloud.model.bms.BmsMenu</find>
-      <find>com.icloud.model.bms.BmsAdminRole</find>
-      <find>com.icloud.model.bms.BmsLogs</find>
       <find>com.icloud.model.bms.BmsRoleMenu</find>
       <find>com.icloud.model.bms.BmsAdmin</find>
       <find>com.icloud.model.bms.BmsRole</find>
@@ -216,6 +125,15 @@
       <find>formDemo</find>
       <find>houseType</find>
       <find>introductionDetail</find>
+      <find>fieldset</find>
+      <find>images</find>
+      <find>layui-upload-file</find>
+      <find>LAY_demo_upload</find>
+      <find>LAY_IMG_URL</find>
+      <find>imageUrl</find>
+      <find>2017</find>
+      <find>房源，房屋来源</find>
+      <find>officeBuildingRent</find>
     </findStrings>
     <replaceStrings>
       <replace>com.icloud.bms.model.BmsMenu</replace>
@@ -224,6 +142,7 @@
       <replace>com.icloud.bms.model.BmsAdmin</replace>
       <replace>com.icloud.bms.model.BmsRole</replace>
       <replace>com.icloud.bms.model.BmsRoleMenu</replace>
+      <replace>officeBuilding</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -232,11 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsAdminMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsAdminRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsLogsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsRoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsRoleMenuMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/bms/BmsMenuMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/Application.java" />
@@ -268,21 +182,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseShareOfficeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseNewHouseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/bms/admin_input.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/bms/web/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/bms/menu_input.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseAreaService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_list.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl" />
       </list>
     </option>
   </component>
@@ -351,8 +270,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -393,34 +312,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="basecommon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="basecommon" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -432,16 +323,6 @@
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
@@ -535,7 +416,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/house" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/house/housing" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -550,8 +431,8 @@
       <recent name="com.icloud.config.datasource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\myproject\house-project\src\main\resources\mapper\house" />
       <recent name="D:\project\myproject\house-project\src\main\resources\templates\house\housing" />
+      <recent name="D:\project\myproject\house-project\src\main\resources\mapper\house" />
       <recent name="D:\project\myproject\house-project\src\main\java\com\icloud\house\model" />
       <recent name="D:\project\myproject\house-project\src\main\resources\templates" />
       <recent name="D:\project\myproject\house-project\src\main\java\com\icloud\basecommon\util\lang" />
@@ -615,7 +496,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.31099194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3197051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -623,20 +504,20 @@
       <window_info id="Designer" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="JRebel Executor" order="0" sideWeight="0.8967828" weight="0.61331445" />
+      <window_info anchor="bottom" id="JRebel Executor" order="0" sideWeight="0.8967828" visible="true" weight="0.26062322" />
       <window_info anchor="bottom" id="Messages" order="1" weight="0.5056657" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.34512022" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.33286119" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.25779036" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.41076487" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.82908845" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3611898" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.16855524" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.103217155" side_tool="true" weight="0.61331445" />
       <window_info anchor="bottom" id="JRebel Console" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32956153" />
-      <window_info anchor="bottom" id="Problems" order="13" />
+      <window_info anchor="bottom" id="Problems" order="13" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -647,7 +528,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31099194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28485253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -655,20 +536,20 @@
       <window_info id="Designer" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="JRebel Executor" order="0" sideWeight="0.8967828" weight="0.61331445" />
+      <window_info anchor="bottom" id="JRebel Executor" order="0" sideWeight="0.8967828" weight="0.3555241" />
       <window_info anchor="bottom" id="Messages" order="1" weight="0.5056657" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.34512022" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.33286119" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" visible="true" weight="0.25779036" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.41076487" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.82908845" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3611898" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.16855524" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.103217155" side_tool="true" weight="0.61331445" />
       <window_info anchor="bottom" id="JRebel Console" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32956153" />
-      <window_info anchor="bottom" id="Problems" order="13" />
+      <window_info anchor="bottom" id="Problems" order="13" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -704,33 +585,22 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/wx/service/WxUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseApplyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/wx/wx_user_input.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="85" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_tags_input.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_tags_list.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -761,15 +631,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_renting_list.ftl">
       <provider selected="true" editor-type-id="text-editor" />
@@ -807,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseNewHouseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseRentingController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -825,13 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="38" column="29" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -907,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="285" column="44" lean-forward="true" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/service/MybaseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -954,25 +794,6 @@
             <element signature="e#544#545#0" expanded="true" />
             <element signature="e#578#579#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="124" column="33" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1035,57 +856,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseNewHouseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="455">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="40" column="25" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="40" selection-end-column="25" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_input.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="29" column="98" lean-forward="true" selection-start-line="29" selection-start-column="98" selection-end-line="29" selection-end-column="98" />
+        <state relative-caret-position="200">
+          <caret line="131" column="14" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="29" />
+        <state relative-caret-position="233">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10521#10522#0" expanded="true" />
-            <element signature="e#10554#10555#0" expanded="true" />
-            <element signature="e#10604#10605#0" expanded="true" />
-            <element signature="e#10648#10649#0" expanded="true" />
-            <element signature="e#10682#10683#0" expanded="true" />
-            <element signature="e#10714#10715#0" expanded="true" />
-            <element signature="e#10762#10763#0" expanded="true" />
-            <element signature="e#10804#10805#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10872#10873#0" expanded="true" />
-            <element signature="e#10922#10923#0" expanded="true" />
-            <element signature="e#10966#10967#0" expanded="true" />
-            <element signature="e#11000#11001#0" expanded="true" />
-            <element signature="e#11032#11033#0" expanded="true" />
-            <element signature="e#11080#11081#0" expanded="true" />
-            <element signature="e#11122#11123#0" expanded="true" />
+            <element signature="e#11231#11232#0" expanded="true" />
+            <element signature="e#11262#11263#0" expanded="true" />
+            <element signature="e#11310#11311#0" expanded="true" />
+            <element signature="e#11350#11351#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_input.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_buildingrent_list.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+        <state relative-caret-position="277">
+          <caret line="92" column="12" lean-forward="true" selection-end-line="221" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="221" column="7" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="146" column="20" selection-end-line="288" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="182" column="24" lean-forward="true" selection-end-line="221" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="221" column="7" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
         </state>
       </provider>
     </entry>

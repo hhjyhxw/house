@@ -1,35 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 	<head>
 		<meta charset="utf-8">
 		<title><#if (record.id)??>编辑<#else>添加</#if></title>
-		<link rel="stylesheet" href="../../plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="../../css/global.css" media="all">
-		<link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="../../css/table.css" />
-		<link rel="stylesheet" href="../../layui/dist/css/layui.css"  media="all">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="${request.contextPath}/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="${request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
 	</head>
 
 	<body>
-	<form class="layui-form" action="" name="actionForm" method="POST" enctype="multipart/form-data" id="form">
-		<input type="hidden" name="id"  id="id" value="${(record.id)!''}">
-		<fieldset class="layui-elem-field" style="width: 60%; text-align: center; margin-left: 20%;">
-			<legend><#if (record.id)??>编辑<#else>添加</#if></legend>
-			<div class="layui-form-item">
-		  	</div>
+	<div >
 
+
+	<form class="layui-form" action="" name="actionForm" method="POST" enctype="multipart/form-data" id="form">
+                <#--
+                <div class="layui-form-item" style="margin-top: 20px;align:center;>
+                            <legend><#if (record.id)??>编辑<#else>添加</#if></legend>
+                </div>
+                -->
+                 <div class="layui-form-item" style="margin-top: 20px;>
+
+                </div>
+                 <div class="layui-form-item">
+                        <div class="layui-input-inline" style="width:70%">
+                            <input type="hidden" name="id"  id="id" value="${(record.id)!''}" placeholder="" autocomplete="off" class="layui-input" readonly>
+                        </div>
+                         <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+                </div>
            <div class="layui-form-item">
-            <label class="layui-form-label">标题</label>
-            <div class="layui-input-inline" style="width:70%">
-                <input type="text" name="title" lay-verify="required" id="title" value="${(record.title)!''}" placeholder="" autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
-        </div>
+             <label class="layui-form-label">标题</label>
+                <div class="layui-input-inline" style="width:70%">
+                    <input type="text" name="title" lay-verify="required" id="title" value="${(record.title)!''}" placeholder="" autocomplete="off" class="layui-input">
+                </div>
+                 <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+          </div>
 
          <div class="layui-form-item">
             <label class="layui-form-label">所在区域</label>
-
             <div class="layui-input-inline" style="width:70%">
                  <select name="village" lay-verify="required" id="village">
                     <option value="">--请选择--</option>
@@ -82,6 +95,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
+
         <div class="layui-form-item">
             <label class="layui-form-label">装修</label>
             <div class="layui-input-inline" style="width:70%">
@@ -90,16 +104,34 @@
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
 
+        <#--
         <div class="layui-form-item">
             <label class="layui-form-label">状态</label>
             <div class="layui-input-block" style="width:70%">
-            <select name="status" lay-verify="required">
-                <option value="">--请选择--</option>
-              <option value="0" <#if (record?? && record.status==0)>selected</#if>>下架</option>
-              <option value="1" <#if (record?? && record.status==1)>selected</#if>>上架</option>
-            </select>
+                <select name="status" lay-verify="required">
+                    <option value="">--请选择--</option>
+                  <option value="0" <#if (record?? && record.status==0)>selected</#if>>下架</option>
+                  <option value="1" <#if (record?? && record.status==1)>selected</#if>>上架</option>
+                </select>
             </div>
         </div>
+        -->
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+              <input type="radio" name="status" value="0" title="下架" <#if (record?? && record.status?? && record.status==0)>checked</#if>>
+              <input type="radio" name="status" value="1" title="上架" <#if (record?? && record.status?? && record.status==1)>checked</#if>>
+            </div>
+          </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">房源</label>
+            <div class="layui-input-block">
+              <input type="radio" name="houseSources" value="0" title="房东" <#if (record?? && record.houseSources==0)>checked</#if>>
+              <input type="radio" name="houseSources" value="1" title="中介" <#if (record?? && record.houseSources==1)>checked</#if>>
+            </div>
+          </div>
 
          <div class="layui-form-item">
             <label class="layui-form-label">文字详情</label>
@@ -108,39 +140,75 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
-       <div class="layui-form-item">
-            <label class="layui-form-label">图片详情</label>
-            <div class="layui-input-inline" style="width:70%">
-                <textarea class="layui-textarea" name="introductionDetail" lay-verify="content" id="introductionDetail"><#if record??>${record.introductionDetail!''}</#if></textarea>
+
+           <div class="layui-form-item">
+                <label class="layui-form-label">图片详情</label>
+                <div class="layui-input-inline" style="width:70%">
+                    <textarea class="layui-textarea" name="introductionDetail" lay-verify="content" id="introductionDetail"><#if record??>${record.introductionDetail!''}</#if></textarea>
+                </div>
+                <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
             </div>
-            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
-        </div>
 
-       <div class="layui-form-item">
-			    <div class="layui-input-block">
-					<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-				    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-			    </div>
-		  	</div>
-		</fieldset>
+              <div class="layui-form-mid layui-word-aux" style="float:right;margin-right:950px;"><span style="color:red;text-align:center;">图片建议640x278 px;大小1M,图片名称不带中文</span></div>
+             </div>
+
+            <div class="layui-form-item">
+                    <label class="layui-form-label">封面图片</label>
+                    <div class="layui-input-inline">
+                         <img id="LAY_demo_upload" width="640px" height="278px" <#if record??> src="${request.contextPath}${(record.imageUrl)!''}" </#if>>
+                         <input lay-verify="content" type="hidden" name="imageUrl"  <#if record??>value="${(record.imageUrl)!''}"</#if> id="LAY_IMG_URL">
+                     </div>
+
+              </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">添加图片</label>
+                         <div class="layui-input-inline">
+                            <input type="file" name="file" lay-type="images" width="90px" class="layui-upload-file">
+                       </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                             <a href="javascript:history.go(-1);" class="layui-btn">返回</a>
+                        </div>
+                    </div>
+
 	</form>
+</div>
 
+        <script type="text/javascript" src="${request.contextPath}/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="${request.contextPath}/js/jquery.min.js"></script>
+		<script>
 
- 	<script type="text/javascript" src="../../plugins/layui/layui.js?v=2"></script>
-	<script type="text/javascript" src="../../js/jquery.min.js"></script>
-	<script>
-            layui.config({
-                base: '${request.contextPath}/plugins/layui/modules/'
-            });
-            layui.use(['form','jquery','layedit'], function() {
+            layui.use(['upload','form','jquery','layedit'], function() {
+                   	var form = layui.form(),
+                   					layer = layui.layer;
+                   					layedit = layui.layedit;
+                   			var imgIndex =  layui.upload({
+                                        url: '${request.contextPath}/backpage/upload/uploadGoodsImage'
+                                        ,method: 'post' //上传接口的http类型
+                                        ,success: function(res){
+                                          if(res.code!='0'){
+                                             layer.msg(res.msg,{time:2000})
+                                             return ;
+                                           }
+                                           debugger;
+                                           LAY_demo_upload.src = "${request.contextPath}"+res.data.src;
+                                         // LAY_IMG_URL.value=res.data.src;
+                                          $('#LAY_IMG_URL').val(res.data.src)
+                                        }
+                                      });
 
-                      var layedit = layui.layedit;
-                     //上传图片,必须放在 创建一个编辑器前面
+                     //富文本上传图片,必须放在 创建一个编辑器前面
                      layedit.set({
                           uploadImage: {
                                url: '${request.contextPath}/backpage/upload/uploadFileImageEdit' //接口url
                               ,type: 'post', //默认post
                                success: function (data) {
+
                                }
                           }
                      });
@@ -168,8 +236,8 @@
                         });
 
                     //表单使用
-                    var form = layui.form(),
-                    layer = layui.layer;
+                   // var form = layui.form(),
+                   // layer = layui.layer;
                     var formurl = '';
                     if($('#id').val()!=''){
                         formurl = "${request.contextPath}/backpage/officeBuildingRent/update";
@@ -180,6 +248,8 @@
                 form.on('submit(formDemo)', function(data) {
                         layedit.sync(detailIndex);
                         layedit.sync(describesIndex);
+                        layedit.sync(imgIndex);
+                        debugger;
                        $.ajax({
                            url:formurl,
                            type:'post',
