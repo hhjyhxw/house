@@ -79,7 +79,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
         </div>
-
+ <#--
         <div class="layui-form-item">
             <label class="layui-form-label">物业类型</label>
             <div class="layui-input-inline" style="width:70%">
@@ -103,7 +103,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
-
+-->
         <#--
         <div class="layui-form-item">
             <label class="layui-form-label">状态</label>

@@ -35,7 +35,7 @@ public class HouseOfficeBuildingRentController extends BaseIdLongController<Hous
     @Override
 	public String list(HouseHousing t, @RequestParam Map<String, Object> params) {
 		Query query =  new Query(params);
-        query.put("house_type",1);//分类（1、写字楼、2 新房 3、共享办公、4租房）
+        query.put("houseType",1);//分类（1、写字楼、2 新房 3、共享办公、4租房）
         query.put("rentable","1");//是否可以租(0不可以组,1可以组
 		PageInfo<HouseHousing> page = baseService.findByPage(query.getPageNum(), query.getPageSize(), query);
 		request.setAttribute("page", page);

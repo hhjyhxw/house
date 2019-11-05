@@ -48,7 +48,7 @@
         <div style="margin:0 auto;width:100%;">
         <fieldset class="layui-elem-field">
              <legend>查询条件</legend>
-            <form action="${request.contextPath}/backpage/officeBuilding/list" id="formId" style="padding-left:33px;">
+            <form action="${request.contextPath}/backpage/newHouse/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum}">
 
@@ -169,11 +169,11 @@
         });
         //跳转新增
         $('#toAdd').on('click', function() {
-            window.location.href = "${request.contextPath}/backpage/officeBuilding/toinput"
+            window.location.href = "${request.contextPath}/backpage/newHouse/toinput"
         });
         //跳转修改
         function toEdit(id){
-            window.location.href = "${request.contextPath}/backpage/officeBuilding/toinput?id="+id;
+            window.location.href = "${request.contextPath}/backpage/newHouse/toinput?id="+id;
         }
         //删除
         layui.use(['layer'], function() {
@@ -182,13 +182,13 @@
         //删除
         function delById(id){
             if(confirm("删除了不能恢复,确定要删除？")){
-                var url = '${request.contextPath}/backpage/officeBuilding/del';
+                var url = '${request.contextPath}/backpage/newHouse/del';
                 $.post(url, {
                     'id':id
                 }, function(data) {
                      if("0000"==data.code){
                         layer.msg("删除成功");
-                        window.location.href = "${request.contextPath}/backpage/officeBuilding/list";
+                        window.location.href = "${request.contextPath}/backpage/newHouse/list";
                     }else{
                         layer.msg("删除失败");
                     }

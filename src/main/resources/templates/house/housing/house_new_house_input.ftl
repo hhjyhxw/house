@@ -79,7 +79,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
         </div>
-
+ <#--
         <div class="layui-form-item">
             <label class="layui-form-label">物业类型</label>
             <div class="layui-input-inline" style="width:70%">
@@ -103,7 +103,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
-
+-->
         <#--
         <div class="layui-form-item">
             <label class="layui-form-label">状态</label>
@@ -254,9 +254,9 @@
                    // layer = layui.layer;
                     var formurl = '';
                     if($('#id').val()!=''){
-                        formurl = "${request.contextPath}/backpage/officeBuilding/update";
+                        formurl = "${request.contextPath}/backpage/newHouse/update";
                     }else{
-                         formurl = "${request.contextPath}/backpage/officeBuilding/add";
+                         formurl = "${request.contextPath}/backpage/newHouse/add";
                     }
                 //监听提交
                 form.on('submit(formDemo)', function(data) {
@@ -271,7 +271,7 @@
                            success:function(data) {
                              if("0000"==data.code){
                                layer.msg('保存成功',{time:2000})
-                               setTimeout(function(){window.location="${request.contextPath}/backpage/officeBuilding/list"},500);
+                               setTimeout(function(){window.location="${request.contextPath}/backpage/newHouse/list"},500);
                               }else{
                                   layer.msg(data.message,{time:2000})
                             }

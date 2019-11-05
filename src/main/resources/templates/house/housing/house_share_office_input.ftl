@@ -57,11 +57,11 @@
         </div>
 
          <div class="layui-form-item">
-            <label class="layui-form-label">售价/平方</label>
+            <label class="layui-form-label">单价</label>
             <div class="layui-input-inline" style="width:70%">
-                <input type="number" name="minUnitPrice" lay-verify="required" id="minUnitPrice" value="${(record.minUnitPrice?c)!''}" placeholder="售价/平方" autocomplete="off" class="layui-input">
+                <input type="number" name="minUnitPrice" lay-verify="required" id="minUnitPrice" value="${(record.minUnitPrice?c)!''}" placeholder="/元/工位/每月" autocomplete="off" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/元/平方米)</span></div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/元/工位/每月)</span></div>
         </div>
 
          <div class="layui-form-item">
@@ -79,7 +79,7 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
         </div>
-
+ <#--
         <div class="layui-form-item">
             <label class="layui-form-label">物业类型</label>
             <div class="layui-input-inline" style="width:70%">
@@ -104,18 +104,9 @@
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
 
-        <#--
-        <div class="layui-form-item">
-            <label class="layui-form-label">状态</label>
-            <div class="layui-input-block" style="width:70%">
-                <select name="status" lay-verify="required">
-                    <option value="">--请选择--</option>
-                  <option value="0" <#if (record?? && record.status==0)>selected</#if>>下架</option>
-                  <option value="1" <#if (record?? && record.status==1)>selected</#if>>上架</option>
-                </select>
-            </div>
-        </div>
         -->
+
+
 
          <div class="layui-form-item">
             <label class="layui-form-label">状态</label>
@@ -125,6 +116,7 @@
             </div>
           </div>
 
+        <#--
          <div class="layui-form-item">
             <label class="layui-form-label">房源</label>
             <div class="layui-input-block">
@@ -146,7 +138,8 @@
                 <input type="radio" name="latest" value="1" title="是" <#if (record?? && record.latest=='1')>checked</#if>>
               </div>
             </div>
-
+        -->
+        
          <div class="layui-form-item">
             <label class="layui-form-label">文字详情</label>
             <div class="layui-input-inline" style="width:70%">
@@ -254,9 +247,9 @@
                    // layer = layui.layer;
                     var formurl = '';
                     if($('#id').val()!=''){
-                        formurl = "${request.contextPath}/backpage/officeBuilding/update";
+                        formurl = "${request.contextPath}/backpage/shareOffice/update";
                     }else{
-                         formurl = "${request.contextPath}/backpage/officeBuilding/add";
+                         formurl = "${request.contextPath}/backpage/shareOffice/add";
                     }
                 //监听提交
                 form.on('submit(formDemo)', function(data) {
@@ -271,7 +264,7 @@
                            success:function(data) {
                              if("0000"==data.code){
                                layer.msg('保存成功',{time:2000})
-                               setTimeout(function(){window.location="${request.contextPath}/backpage/officeBuilding/list"},500);
+                               setTimeout(function(){window.location="${request.contextPath}/backpage/shareOffice/list"},500);
                               }else{
                                   layer.msg(data.message,{time:2000})
                             }
