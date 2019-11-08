@@ -26,7 +26,7 @@ public class InterceptorStack {
 //					.excludePathPatterns("/backpage/setting/beforeUpdate").excludePathPatterns("/backpage/setting/update");
             //xcxUserLogin小程序端登陆拦截
             registry.addInterceptor(new XcxLoginInterceptor()).addPathPatterns("/xcxpath/**")
-                    .excludePathPatterns("/thirdInterfacePath/xcxUserLogin/**");
+                    .excludePathPatterns("/xcxpath/xcxUserLogin/**");
 
 		    registry.addInterceptor(new PermissionsInterceptor()).addPathPatterns("/admin/**").addPathPatterns("/backpage/**");
 //			registry.addInterceptor(new AddTokenInterceptor()).addPathPatterns("/beanGoods/goodsDetail");

@@ -5,7 +5,7 @@ server:
         max-threads: 1000
         min-spare-threads: 10
     port: 8080
-    context-path: /housing
+    context-path: /
 # mysql
 spring:
     # 环境 dev|test|pro

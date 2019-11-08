@@ -23,8 +23,10 @@ import java.util.Map;
 @Transactional
 public class WxUserService extends MybaseServiceImpl<WxUserMapper,WxUser> {
 
-    public WxUser findByUnionId(String unionId) {
-        return null;
+    public WxUser findByOpenId(String openId) {
+        QueryWrapper<WxUser> queryWrapper = new QueryWrapper<WxUser>();
+        queryWrapper.eq("openid",openId);
+        return (WxUser) getOne(queryWrapper);
     }
 
 }

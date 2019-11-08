@@ -73,12 +73,13 @@ public class XcxUserLoginService {
                         String decryData = AES.decrypt(encryptedData, session_key, iv);
                         log.info("decryData:" + decryData);
                         JSONObject decryDataJson = JSONObject.parseObject(decryData);
-                        if(!decryDataJson.containsKey("unionId")){
-                            resjson.put("errCode", "1000");
-                            resjson.put("resultMsg", "没获取到用户unionId");
-                            return resjson;
-                        }
-                        WxUser user = wxUserService.findByUnionId(decryDataJson.getString("unionId"));
+//                        if(!decryDataJson.containsKey("unionId")){
+//                            resjson.put("errCode", "1000");
+//                            resjson.put("resultMsg", "没获取到用户unionId");
+//                            return resjson;
+//                        }
+//                        WxUser user = wxUserService.findByOpenId(decryDataJson.getString("unionId"));
+                        WxUser user = wxUserService.findByOpenId(openId);
                         JSONObject user_raw =  JSONObject.parseObject(json.getString("user_raw"));
                         if(user!=null){
                             user.setNickName(decryDataJson.containsKey("nickName")? EmojiUtil.toAlias(decryDataJson.getString("nickName")):user.getNickName());
@@ -103,7 +104,7 @@ public class XcxUserLoginService {
                         resjson.put("sid", rd_session);
                         log.info("openId=" + openId+"; session_key="+session_key);
                         XcxUserSession userSession = null;
-                         Object userSessionObj =  redisService.get(user.getUnionid());
+                         Object userSessionObj =  redisService.get(user.getOpenid());
                         if(userSessionObj!=null){
                             userSession=(XcxUserSession)userSessionObj;
                             userSession.setOpenId(openId);
@@ -120,8 +121,8 @@ public class XcxUserLoginService {
                             userSession.setWxUser(user);
                         }
                         //更新缓存
-                        redisService.set(rd_session,user.getUnionid(),1200L);
-                        redisService.set(user.getUnionid(),userSession,1200L);
+                        redisService.set(rd_session,user.getOpenid(),1200L);
+                        redisService.set(user.getOpenid(),userSession,1200L);
                         return resjson;
                     }else{
 

@@ -34,7 +34,7 @@ public class XcxUserSessionService implements Serializable{
 			return ((XcxUserSession)userSessionObj).getWxUser();
 		}
 		//先去查询
-        WxUser wxUser = wxUserService.findByUnionId(unionid);
+        WxUser wxUser = wxUserService.findByOpenId(unionid);
 		if(wxUser!=null){
             setUserSession(unionid, wxUser);
             return wxUser;
