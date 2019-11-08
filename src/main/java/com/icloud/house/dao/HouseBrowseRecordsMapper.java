@@ -1,6 +1,11 @@
 package com.icloud.house.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.icloud.basecommon.model.Query;
 import com.icloud.house.model.HouseBrowseRecords;
+import com.icloud.house.model.HouseHousing;
+
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -10,5 +15,6 @@ import com.icloud.house.model.HouseBrowseRecords;
  * @date 2019-11-01 21:46:51
  */
 public interface HouseBrowseRecordsMapper extends BaseMapper<HouseBrowseRecords> {
-	
+
+    List<HouseHousing> selectList(Map<String,Object> params);
 }

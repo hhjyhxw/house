@@ -101,7 +101,7 @@ public class HouseHousing implements Serializable {
        private String towns;
    	   	   /* 发布人ID */
        @TableField("pub_user")
-       private Long pubUser;
+       private Long pubUser;//微信用户
    	   	   /* 标签 */
        @TableField("tags")
        private String tags;
