@@ -51,6 +51,7 @@
             <form action="${request.contextPath}/backpage/houseShareItem/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum?c}">
+                      <input type="text" id="parentId" name="parentId" value="${(record.parentId?c)!}">
                      <li><button id="search" >查询</button></li>
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
@@ -138,7 +139,7 @@
         });
         //跳转新增
         $('#toAdd').on('click', function() {
-            window.location.href = "${request.contextPath}/backpage/houseShareItem/toinputnew?parentId=${record.parentId}"
+            window.location.href = "${request.contextPath}/backpage/houseShareItem/toinputnew?parentId="+ $('#parentId').val();
         });
         //跳转修改
         function toEdit(id){
@@ -157,7 +158,7 @@
                 }, function(data) {
                      if("0000"==data.code){
                         layer.msg("删除成功");
-                        window.location.href = "${request.contextPath}/backpage/houseShareItem/list?parentId=${record.parentId}";
+                        window.location.href = "${request.contextPath}/backpage/houseShareItem/list?parentId="+ $('#parentId').val();
                     }else{
                         layer.msg("删除失败");
                     }

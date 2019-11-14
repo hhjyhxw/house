@@ -20,7 +20,7 @@
 		<input type="hidden" name="id"  id="id" value="${(record.id)!''}">
 		<fieldset class="layui-elem-field" style="width: 60%; text-align: center; margin-left: 20%;">
 			<legend><#if (record.id)??>编辑<#else>添加</#if></legend>
-			 <input type="hidden" name="parentId" lay-verify="required" id="parentId" value="${(record.parentId)!''}" placeholder="" autocomplete="off" class="layui-input">
+			 <input type="text" name="parentId" lay-verify="required" id="parentId" value="${(record.parentId)!''}" placeholder="" autocomplete="off" class="layui-input">
 			<div class="layui-form-item">
 		  	</div>
            <div class="layui-form-item">
@@ -60,6 +60,7 @@
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                 <a href="javascript:history.go(-1);" class="layui-btn">返回</a>
             </div>
         </div>
 		</fieldset>
