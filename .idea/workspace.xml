@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-917">
-              <caret line="53" column="39" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="39" />
+            <state relative-caret-position="208">
+              <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -53,11 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_input.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
+            <state relative-caret-position="197">
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -67,15 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
               <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/BaseIdLongController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="59" column="39" lean-forward="true" selection-start-line="58" selection-start-column="3" selection-end-line="59" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -144,9 +144,9 @@
       <find>enterpriseServicer</find>
       <find>toAdd</find>
       <find>toEdit</find>
-      <find>imageUrl</find>
       <find>parentId</find>
       <find>返回</find>
+      <find>imageUrl</find>
     </findStrings>
     <replaceStrings>
       <replace>com.icloud.bms.model.BmsMenu</replace>
@@ -219,8 +219,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseShareItem.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseShareItemController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_input.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" />
       </list>
     </option>
   </component>
@@ -580,13 +580,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -913,13 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-917">
-          <caret line="53" column="39" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_input.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -958,8 +944,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_input.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="62" column="78" selection-start-line="62" selection-start-column="78" selection-end-line="62" selection-end-column="78" />
+        <state relative-caret-position="197">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
         </state>
       </provider>
     </entry>

@@ -51,7 +51,7 @@
             <form action="${request.contextPath}/backpage/houseShareItem/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum?c}">
-                      <input type="text" id="parentId" name="parentId" value="${(record.parentId?c)!}">
+                      <input type="hidden" id="parentId" name="parentId" value="${(record.parentId?c)!}">
                      <li><button id="search" >查询</button></li>
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
