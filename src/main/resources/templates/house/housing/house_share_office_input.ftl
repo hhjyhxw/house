@@ -141,6 +141,20 @@
         -->
 
          <div class="layui-form-item">
+            <label class="layui-form-label">基础服务</label>
+            <div class="layui-input-inline" style="width:70%">
+                <textarea class="layui-textarea layui-hide" name="baseServicer" lay-verify="" id="baseServicer"><#if record??>${record.baseServicer!''}</#if></textarea>
+            </div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+        </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">企业服务</label>
+            <div class="layui-input-inline" style="width:70%">
+                <textarea class="layui-textarea layui-hide" name="enterpriseServicer" lay-verify="" id="enterpriseServicer"><#if record??>${record.enterpriseServicer!''}</#if></textarea>
+            </div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+        </div>
+         <div class="layui-form-item">
             <label class="layui-form-label">文字详情</label>
             <div class="layui-input-inline" style="width:70%">
                 <textarea class="layui-textarea layui-hide" name="describes" lay-verify="" id="describes"><#if record??>${record.describes!''}</#if></textarea>
@@ -194,6 +208,8 @@
                    	var form = layui.form(),
                    					layer = layui.layer;
                    					layedit = layui.layedit;
+
+                   			//单张图片上传
                    			var imgIndex =  layui.upload({
                                         url: '${request.contextPath}/backpage/upload/uploadGoodsImage'
                                         ,method: 'post' //上传接口的http类型
@@ -241,7 +257,14 @@
                       var  describesIndex = layedit.build('describes', {
                           tool: ['strong','italic','underline','del','left','center', 'right', '|']
                         });
-
+                      //3、基础服务 文本编辑器
+                      var  baseIndex = layedit.build('baseServicer', {
+                        tool: ['strong','italic','underline','del','left','center', 'right', '|']
+                      });
+                       //4、企业服务 文本编辑器
+                        var  enterpriseIndex = layedit.build('enterpriseServicer', {
+                          tool: ['strong','italic','underline','del','left','center', 'right', '|']
+                        });
                     //表单使用
                    // var form = layui.form(),
                    // layer = layui.layer;
@@ -256,6 +279,8 @@
                         layedit.sync(detailIndex);
                         layedit.sync(describesIndex);
                         layedit.sync(imgIndex);
+                        layedit.sync(baseIndex);
+                        layedit.sync(enterpriseIndex);
                         debugger;
                        $.ajax({
                            url:formurl,

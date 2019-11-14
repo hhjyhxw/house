@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>HouseHousing</title>
+		<title>HouseShareItem</title>
 		<link rel="stylesheet" href="../../plugins/layui/css/layui.css" media="all" />
         <link rel="stylesheet" href="../../css/global.css" media="all">
         <link rel="stylesheet" href="../../plugins/font-awesome/css/font-awesome.min.css">
@@ -48,27 +48,9 @@
         <div style="margin:0 auto;width:100%;">
         <fieldset class="layui-elem-field">
              <legend>查询条件</legend>
-            <form action="${request.contextPath}/backpage/shareOffice/list" id="formId" style="padding-left:33px;">
+            <form action="${request.contextPath}/backpage/houseShareItem/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
-                     <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum}">
-
-                     <li> 标题： <input type="text" name="title" id="title"  value="${(record.title)!}" placeholder="" autocomplete="off" ></li>
-                   <li> 区域：
-                    <select name="village" id="village">
-                      <option value="">--请选择--</option>
-                        <#if arenList??>
-                            <#list arenList as areaObj>
-                                <option value="${areaObj.areanName}"  <#if (record.village)?? && record.village==areaObj.areanName>selected="selected"</#if>>${areaObj.areanName}</option>
-                            </#list>
-                        </#if>
-                    </select>
-                    </li>
-
-
-                     <#--
-                     <li>开始时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="startTime" name="startTime" value="${(start)!''}"></li>
-                     <li>结束时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endTime" name="endTime" value="${(end)!''}"></li>
-                     -->
+                     <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum?c}">
                      <li><button id="search" >查询</button></li>
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
@@ -85,33 +67,22 @@
                 <table class="site-table table-hover">
                     <thead>
                         <tr>
-                         <th>编号</th>
-                         <th>标题</th>
-                         <th>分类</th>
-                         <th>所属区域</th>
-                         <th>状态</th>
+                         <th></th>
+                         <th>头图</th>
+                         <th>名称描述</th>
+                         <th>价格（元/工位/月）</th>
                         <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
                     <#list page.list as t>
                         <tr>
-                         <td>${t.id}</td>
-                         <td>${t.title!''}</td>
-                         <td>
-                            <#if (t.houseType==1)>写字楼</#if>
-                            <#if (t.houseType==2)>新房</#if>
-                            <#if (t.houseType==3)>共享办公</#if>
-                            <#if (t.houseType==4)>租房</#if>
-                         </td>
-                          <td>${t.village!''}</td>
-                         <td>
-                             <#if t.status==0>下架</#if>
-                             <#if t.status==1>上架</#if>
-                         </td>
+                         <td>${t.id!''}</td>
+                         <td>${t.imageUrl!''}</td>
+                         <td>${t.itemname!''}</td>
+                         <td>${t.price!''}</td>
                             <th>
                             <div class="layui-btn-group">
-                                 <a href="${request.contextPath}/backpage/houseShareItem/list?parentId=${t.id}"  class="layui-btn layui-btn-mini">套间列表</a>
                                  <a href="javascript:toEdit(${(t.id)!''})"  class="layui-btn layui-btn-mini">修改</a>
                                  <a href="javascript:delById(${(t.id)!''})"  class="layui-btn layui-btn-mini">删除</a>
                             </div>
@@ -148,12 +119,9 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="../../plugins/layui/layui.js"></script>
-        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+     <script type="text/javascript" src="${request.contextPath}/plugins/layui/layui.js"></script>
+        <script type="text/javascript" src="${request.contextPath}/js/jquery.min.js"></script>
         <script>
-            layui.config({
-                base: '../../plugins/layui/modules/'
-            });
         //提交表单查询
         function pageSkip(pageNum){
           var formSubmit = document.getElementById('formId');
@@ -161,8 +129,8 @@
             pageNum = 1;
           }
           $('#pageNum').attr('value',pageNum);
-          formSubmit.submit();
-        }
+            formSubmit.submit();
+          }
         //查询
         $('#search').on('click', function() {
              var formSubmit = document.getElementById('formId');
@@ -170,11 +138,11 @@
         });
         //跳转新增
         $('#toAdd').on('click', function() {
-            window.location.href = "${request.contextPath}/backpage/shareOffice/toinput"
+            window.location.href = "${request.contextPath}/backpage/houseShareItem/toinputnew?parentId=${record.parentId}"
         });
         //跳转修改
         function toEdit(id){
-            window.location.href = "${request.contextPath}/backpage/shareOffice/toinput?id="+id;
+            window.location.href = "${request.contextPath}/backpage/houseShareItem/toinputnew?id="+id;
         }
         //删除
         layui.use(['layer'], function() {
@@ -183,13 +151,13 @@
         //删除
         function delById(id){
             if(confirm("删除了不能恢复,确定要删除？")){
-                var url = '${request.contextPath}/backpage/shareOffice/del';
+                var url = '${request.contextPath}/backpage/houseShareItem/del';
                 $.post(url, {
                     'id':id
                 }, function(data) {
                      if("0000"==data.code){
                         layer.msg("删除成功");
-                        window.location.href = "${request.contextPath}/backpage/shareOffice/list";
+                        window.location.href = "${request.contextPath}/backpage/houseShareItem/list?parentId=${record.parentId}";
                     }else{
                         layer.msg("删除失败");
                     }

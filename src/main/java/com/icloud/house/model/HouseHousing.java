@@ -60,6 +60,16 @@ public class HouseHousing implements Serializable {
    	   	   /* 图片详情 */
        @TableField("introduction_detail")
        private String introductionDetail;
+
+        /* 基础服务 */
+        @TableField("base_servicer")
+        private String baseServicer;
+
+        /* 企业服务 */
+        @TableField("enterprise_servicer")
+        private String enterpriseServicer;
+
+
    	   	   /* 所在小区 */
        @TableField("village")
        private String village;
@@ -614,5 +624,21 @@ public class HouseHousing implements Serializable {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getBaseServicer() {
+        return baseServicer;
+    }
+
+    public void setBaseServicer(String baseServicer) {
+        this.baseServicer = baseServicer;
+    }
+
+    public String getEnterpriseServicer() {
+        return enterpriseServicer;
+    }
+
+    public void setEnterpriseServicer(String enterpriseServicer) {
+        this.enterpriseServicer = enterpriseServicer;
     }
 }

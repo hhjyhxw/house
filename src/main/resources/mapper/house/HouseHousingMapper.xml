@@ -19,6 +19,8 @@
      <result property="status" column="status"/>
      <result property="describes" column="describes"/>
      <result property="introductionDetail" column="introduction_detail"/>
+        <result property="baseServicer" column="base_servicer"/>
+        <result property="enterpriseServicer" column="enterprise_servicer"/>
      <result property="village" column="village"/>
      <result property="addesses" column="addesses"/>
      <result property="houseSources" column="house_sources"/>
@@ -51,6 +53,7 @@
 
    <!-- 基础字段列 -->
    <sql id="Base_Column_List" >
-id,title,min_total_price,max_total_price,min_unit_price,max_unit_price,average_priice,min_house_area,max_house_area,storey,house_type,status,describes,introduction_detail,village,addesses,house_sources,rent_way,build_area,open_date,into_date,lng,lat,province,city,county,towns,pub_user,tags,features,fitup,house_classs,specifyes,latest,property_type,rentable,create_time,modify_man,modify_time,create_man
+id,title,min_total_price,max_total_price,min_unit_price,max_unit_price,average_priice,min_house_area,max_house_area,storey,house_type,status,describes,introduction_detail,village,addesses,house_sources,rent_way,build_area,open_date,into_date,lng,lat,province,city,county,towns,pub_user,tags,features,fitup,house_classs,specifyes,latest,property_type,rentable,
+       create_time,modify_man,modify_time,create_man,base_servicer,enterprise_servicer
     </sql>
 </mapper>
