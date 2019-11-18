@@ -1,20 +1,29 @@
 package com.icloud.xcx.web;
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageInfo;
 import com.icloud.annotation.AuthIgnore;
+import com.icloud.annotation.LoginUser;
 import com.icloud.basecommon.model.Query;
+import com.icloud.common.MapEntryUtils;
 import com.icloud.house.model.HouseHousing;
+import com.icloud.house.model.HouseShareItem;
+import com.icloud.house.service.HouseBrowseRecordsService;
 import com.icloud.house.service.HouseHousingService;
+import com.icloud.house.service.HouseShareItemService;
 import com.icloud.wx.model.WxUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -25,6 +34,10 @@ public class HouseQueryController {
 
     @Autowired
     private HouseHousingService houseHousingService;
+    @Autowired
+    private HouseShareItemService houseShareItemService;
+    @Autowired
+    private HouseBrowseRecordsService houseBrowseRecordsService;
 
     /**
      * 房源查询，各种查询参数布一样，详解文档
@@ -36,9 +49,12 @@ public class HouseQueryController {
     @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/list")
-    public Object list(HttpServletRequest request, @RequestParam Map<String, Object> params) {
+    public Object list(HttpServletRequest request,@RequestBody Map<String, Object> params) {
+
         JSONObject resultJson = new JSONObject();
         try {
+//            Map<String, Object> map = MapEntryUtils.objectToMap(t);
+//            params.putAll(map);
             for (String temp : params.keySet()) {
                 log.info(temp + "=====" + params.get(temp));
             }
@@ -73,7 +89,7 @@ public class HouseQueryController {
     @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/detail")
-    public Object detail(HttpServletRequest request, @RequestParam Map<String, Object> params) {
+    public Object detail(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             for (String temp : params.keySet()) {
@@ -86,11 +102,33 @@ public class HouseQueryController {
             }
             JSONObject resultData = new JSONObject();
             Object houseHousing = houseHousingService.getById(Long.valueOf(params.get("id").toString()));
+            HouseHousing house = null;
+
+            if(houseHousing!=null){
+                house = (HouseHousing) houseHousing;
+                List<HouseShareItem> itemList = null;
+                if(house.getHouseType()!=null && 3==house.getHouseType().intValue()){//共享办公下的列表
+                    QueryWrapper queryWrapper = new QueryWrapper();
+                    queryWrapper.eq("parent_id",house.getId());
+                    itemList = houseShareItemService.list(queryWrapper);
+                    house.setItemList(itemList);
+                }else {
+                    itemList = new ArrayList<HouseShareItem>();
+                    HouseShareItem houseShareItem = new HouseShareItem();
+                    houseShareItem.setImageUrl(house.getImageUrl());
+                    itemList.add(houseShareItem);
+                }
+                //保存或者更新我的足迹
+                if(user!=null){
+                    houseBrowseRecordsService.saveOrUpdate(house,user);
+                }
+            }
+
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "获取数据成功");
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "获取数据成功");
-            resultJson.put("resultData", houseHousing);
+            resultData.put("data",house);
             resultJson.put("resultData", resultData);
         } catch (Exception ex) {
             log.error("error=====", ex);

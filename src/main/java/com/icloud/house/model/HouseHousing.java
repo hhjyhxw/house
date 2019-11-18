@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -156,6 +157,9 @@ public class HouseHousing implements Serializable {
     private String imageUrl;
 
 
+    //子项列表
+    @TableField(exist = false)
+    private List<HouseShareItem> itemList;
    	
 	/**
 	 * 设置：
@@ -640,5 +644,62 @@ public class HouseHousing implements Serializable {
 
     public void setEnterpriseServicer(String enterpriseServicer) {
         this.enterpriseServicer = enterpriseServicer;
+    }
+
+    public List<HouseShareItem> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<HouseShareItem> itemList) {
+        this.itemList = itemList;
+    }
+
+    @Override
+    public String toString() {
+        return "HouseHousing{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", minTotalPrice=" + minTotalPrice +
+                ", maxTotalPrice=" + maxTotalPrice +
+                ", minUnitPrice=" + minUnitPrice +
+                ", maxUnitPrice=" + maxUnitPrice +
+                ", averagePriice=" + averagePriice +
+                ", minHouseArea=" + minHouseArea +
+                ", maxHouseArea=" + maxHouseArea +
+                ", storey=" + storey +
+                ", houseType=" + houseType +
+                ", status=" + status +
+                ", describes='" + describes + '\'' +
+                ", introductionDetail='" + introductionDetail + '\'' +
+                ", baseServicer='" + baseServicer + '\'' +
+                ", enterpriseServicer='" + enterpriseServicer + '\'' +
+                ", village='" + village + '\'' +
+                ", addesses='" + addesses + '\'' +
+                ", houseSources=" + houseSources +
+                ", rentWay=" + rentWay +
+                ", buildArea='" + buildArea + '\'' +
+                ", openDate=" + openDate +
+                ", intoDate=" + intoDate +
+                ", lng=" + lng +
+                ", lat=" + lat +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", towns='" + towns + '\'' +
+                ", pubUser=" + pubUser +
+                ", tags='" + tags + '\'' +
+                ", features='" + features + '\'' +
+                ", fitup='" + fitup + '\'' +
+                ", houseClasss='" + houseClasss + '\'' +
+                ", specifyes='" + specifyes + '\'' +
+                ", latest='" + latest + '\'' +
+                ", propertyType='" + propertyType + '\'' +
+                ", rentable='" + rentable + '\'' +
+                ", createTime=" + createTime +
+                ", modifyMan=" + modifyMan +
+                ", modifyTime=" + modifyTime +
+                ", createMan=" + createMan +
+                ", imageUrl='" + imageUrl + '\'' +
+                '}';
     }
 }

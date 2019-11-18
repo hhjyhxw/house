@@ -260,11 +260,16 @@ public class MapEntryUtils {
             for(Map.Entry<String, Object> entry : mapResult.entrySet()) {
                 String propertyName = entry.getKey();       //属性名
                 Object value = entry.getValue();
-
+                if("serialVersionUID".equals(propertyName)){
+                    continue;
+                }
                 Field field = getClassField(clazz, propertyName);
                 if(field==null)
                     continue;
                 TableField myFieldAnnotation = field.getAnnotation(TableField.class);
+                if(!myFieldAnnotation.exist()){//表示布关联数据库
+                    continue;
+                }
                 String column = null;
                 if(myFieldAnnotation!=null){
                     column = myFieldAnnotation.value();
@@ -272,6 +277,7 @@ public class MapEntryUtils {
                     TableId idfieldAnnotation = field.getAnnotation(TableId.class);
                     column = idfieldAnnotation.value();
                 }
+
                 myFieldAnnotation.value();
                 Class<?> fieldTypeClass = field.getType();
                 value = convertValType(value, fieldTypeClass);

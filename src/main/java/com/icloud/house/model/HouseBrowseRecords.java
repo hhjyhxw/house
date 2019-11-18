@@ -26,6 +26,10 @@ public class HouseBrowseRecords implements Serializable {
    	   	   /* 浏览时间 */
        @TableField("create_time")
        private Date createTime;
+        /* 浏览时间 */
+        @TableField("modify_time")
+        private Date modifyTime;
+
    	   	   /* 用户id */
        @TableField("user_id")
        private Long userId;
@@ -78,4 +82,12 @@ public class HouseBrowseRecords implements Serializable {
 	public Long getUserId() {
 		return userId;
 	}
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
 }

@@ -100,4 +100,15 @@ public class HouseShareItem implements Serializable {
 	public Long getParentId() {
 		return parentId;
 	}
+
+    @Override
+    public String toString() {
+        return "HouseShareItem{" +
+                "id=" + id +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", itemname='" + itemname + '\'' +
+                ", price=" + price +
+                ", parentId=" + parentId +
+                '}';
+    }
 }

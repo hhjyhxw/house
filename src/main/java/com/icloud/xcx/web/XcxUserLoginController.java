@@ -46,10 +46,10 @@ public class XcxUserLoginController {
         return map;
 	}
 	
-	/**个人中心**/
+	/**用户信息**/
 	@ResponseBody
-	@RequestMapping(value="/wx/myCenter")
-	public Map<String,Object> myCenter(HttpServletRequest request){
+	@RequestMapping(value="/wx/userInfo")
+	public Map<String,Object> userInfo(HttpServletRequest request){
 		String jsonText = RequestUtil.readPostContent(request);  
 		return xcxUserLoginService.getWxUser(jsonText);
 	}

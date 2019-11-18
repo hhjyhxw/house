@@ -3,7 +3,9 @@ package com.icloud.config.interceptor;
 import com.icloud.annotation.SysLog;
 import com.icloud.basecommon.util.logs.LogUtils;
 import com.icloud.bms.model.BmsAdmin;
+import com.icloud.bms.model.BmsMenu;
 import com.icloud.common.IpUtil;
+import com.icloud.common.ResponseUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.NamedThreadLocal;
@@ -19,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
  * 权限拦截器
@@ -54,20 +57,22 @@ public class PermissionsInterceptor implements HandlerInterceptor {
             response.sendRedirect("/tologin");
 			return false;
 		}
-		return true;
-		/*List<Tmenu> adminMenu = (List<Tmenu>) session.getAttribute("admin_menu");
-		String requestPath = request.getServletPath();
+        if (request.getHeader("x-requested-with") != null && request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest"))
+        {
+            return true;
+        }
+        String requestPath = request.getServletPath();
 		if(requestPath.matches(NO_INTERCEPTOR_PATH)){
 			return true;
 		}
-		for(Tmenu m:adminMenu){
+		List<BmsMenu> adminMenu = (List<BmsMenu>) session.getAttribute("admin_menu");
+		for(BmsMenu m:adminMenu){
 			if(m.getMenuUrl().indexOf(requestPath)>=0){
 				return true;
 			}
 		}
-		
 	    ResponseUtils.renderText(response, "您暂无权限");
-		return false;*/
+		return false;
 	}
 
 	@Override

@@ -7,7 +7,7 @@ spring:
         username: root
         password: 123456
         initial-size: 10
-        max-active: 100
+        max-active: level
         min-idle: 10
         max-wait: 60000
         pool-prepared-statements: true
@@ -66,6 +66,6 @@ spring:
       # 配置级别
       level:
         #分包配置级别，即不同的目录下可以使用不同的级别
-        com.icloud: info
+        com.icloud: INFO
         root: INFO
         org.springframework.web: DEBUG

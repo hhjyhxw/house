@@ -8,6 +8,7 @@
      <id property="id" column="id"/>
      <result property="houseId" column="house_id"/>
      <result property="createTime" column="create_time"/>
+     <result property="modifyTime" column="modify_time"/>
      <result property="userId" column="user_id"/>
     </resultMap>
 
