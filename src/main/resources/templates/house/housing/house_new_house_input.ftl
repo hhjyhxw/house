@@ -132,6 +132,21 @@
               <input type="radio" name="houseSources" value="1" title="中介" <#if (record?? && record.houseSources==1)>checked</#if>>
             </div>
           </div>
+
+          <div class="layui-form-item">
+              <label class="layui-form-label">房型选择</label>
+              <div class="layui-input-block">
+                <select name="newhouseType" lay-verify="required">
+                  <option value=""></option>
+                  <option value="1" <#if (record?? && record.newhouseType?? && record.newhouseType=='1')>selected</#if>>1卧</option>
+                  <option value="2" <#if (record?? && record.newhouseType?? && record.newhouseType=='2')>selected</#if>>2卧</option>
+                  <option value="3" <#if (record??  && record.newhouseType?? && record.newhouseType=='3')>selected</#if>>3卧</option>
+                  <option value="4" <#if (record?? && record.newhouseType?? && record.newhouseType=='4')>selected</#if>>4卧</option>
+                  <option value="5" <#if (record?? && record.newhouseType?? && record.newhouseType=='5')>selected</#if>>5卧以上</option>
+                </select>
+              </div>
+            </div>
+
            <div class="layui-form-item">
               <label class="layui-form-label">是否特价</label>
               <div class="layui-input-block">
@@ -147,6 +162,14 @@
               </div>
             </div>
 
+           <div class="layui-form-item">
+              <label class="layui-form-label">分类</label>
+              <div class="layui-input-block">
+                <input type="radio" name="latest" value="0" title="最近开盘" <#if (record?? && record.latest=='0')>checked</#if>>
+                <input type="radio" name="latest" value="1" title="优惠楼盘" <#if (record?? && record.latest=='1')>checked</#if>>
+                 <input type="radio" name="latest" value="3" title="优选房源" <#if (record?? && record.latest=='1')>checked</#if>>
+              </div>
+           </div>
          <div class="layui-form-item">
             <label class="layui-form-label">文字详情</label>
             <div class="layui-input-inline" style="width:70%">

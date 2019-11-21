@@ -46,7 +46,8 @@ public class HouseHousingService extends MybaseServiceImpl<HouseHousingMapper,Ho
         if(query.entrySet().size()>0) {
             for (Map.Entry<String, Object> entry : query.entrySet()) {
                 if(entry.getValue()!=null && !"".equals(entry.getValue().toString())) {
-                    if ("village".equals(entry.getKey()) || "title".equals(entry.getKey()) || "describes".equals(entry.getKey())) {
+                    if ("village".equals(entry.getKey()) || "title".equals(entry.getKey())
+                        || "houseClasss".equals(entry.getKey()) || "describes".equals(entry.getKey())) {
                         qw.like(entry.getKey(), entry.getValue());
                     }else{
                         qw.eq(entry.getKey(), entry.getValue());
@@ -75,7 +76,8 @@ public class HouseHousingService extends MybaseServiceImpl<HouseHousingMapper,Ho
                 }
             }
         }
-        //排序：0、新房 1单价 、2 总价、3面积
+        //排序：0、新房 1单价 、2 总价、3面积 4、最近开盘时间
+        qw.orderByDesc("create_time");
         if(oldquery.entrySet().size()>0) {
             for (Map.Entry<String, Object> entry : oldquery.entrySet()) {
                 if(entry.getValue()!=null && !"".equals(entry.getValue().toString())) {
@@ -93,6 +95,10 @@ public class HouseHousingService extends MybaseServiceImpl<HouseHousingMapper,Ho
                     if("minHouseAreaSort".equals(entry.getKey())) {
                         if("asc".equals(entry.getKey().toString())) qw.orderByAsc("min_house_area");
                         if("desc".equals(entry.getKey().toString())) qw.orderByDesc("min_house_area");
+                    }
+                    if("openDateSort".equals(entry.getKey())) {
+                        if("asc".equals(entry.getKey().toString())) qw.orderByAsc("open_date");
+                        if("desc".equals(entry.getKey().toString())) qw.orderByDesc("open_date");
                     }
                 }
             }

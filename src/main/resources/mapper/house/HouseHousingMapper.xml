@@ -48,6 +48,8 @@
      <result property="modifyTime" column="modify_time"/>
      <result property="createMan" column="create_man"/>
         <result property="imageUrl" column="image_url"/>
+        <result property="newhouseType" column="newhouse_type"/>
+
 
     </resultMap>
 

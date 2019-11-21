@@ -53,6 +53,7 @@ public class WxUserSpaceController {
             if(user==null){
                 return null;
             }
+
             Query query = new Query(params);
             query.put("userId",user.getId());
             PageInfo<HouseHousing> page = houseBrowseRecordsService.findHouseHousingPage(query.getPageNum(), query.getPageSize(), query);
