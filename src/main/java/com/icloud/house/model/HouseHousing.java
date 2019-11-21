@@ -3,6 +3,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -87,6 +89,7 @@ public class HouseHousing implements Serializable {
        @TableField("build_area")
        private String buildArea;
    	   	   /* 开盘时间（新楼盘需要） */
+       @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
        @TableField("open_date")
        private Date openDate;
    	   	   /* 入住时间（新楼盘需要） */
