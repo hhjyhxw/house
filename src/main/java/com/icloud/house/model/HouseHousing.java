@@ -122,7 +122,7 @@ public class HouseHousing implements Serializable {
    	   	   /* 特色 */
        @TableField("features")
        private String features;
-   	   	   /* 装修 */
+   	   	   /* 装修  装修 0豪华装修 1精装修 2毛坯',*/
        @TableField("fitup")
        private String fitup;
    	   	   /* 房型 1、1卧 2、2卧 3、3卧 4、4卧 5、5卧以上 */
@@ -167,6 +167,11 @@ public class HouseHousing implements Serializable {
     /* 新房源类型 0最近开盘 1优惠楼盘 2优选房源 */
     @TableField("newhouse_type")
     private String newhouseType;
+
+    /* 办公类型 0普通办公 1共享办公 2创意园 */
+    @TableField("office_type")
+    private String officeType;
+
    	
 	/**
 	 * 设置：
@@ -659,6 +664,14 @@ public class HouseHousing implements Serializable {
 
     public void setNewhouseType(String newhouseType) {
         this.newhouseType = newhouseType;
+    }
+
+    public String getOfficeType() {
+        return officeType;
+    }
+
+    public void setOfficeType(String officeType) {
+        this.officeType = officeType;
     }
 
     public List<HouseShareItem> getItemList() {

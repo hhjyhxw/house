@@ -105,8 +105,25 @@
         </div>
 
         -->
+        <div class="layui-form-item">
+            <label class="layui-form-label">装修</label>
+            <div class="layui-input-inline" style="width:70%">
+                  <input type="radio" name="fitup" value="0" title="豪华装修" <#if (record?? && record.fitup?? && record.fitup=='0')>checked</#if>>
+                  <input type="radio" name="fitup" value="1" title="精装修" <#if (record??  && record.fitup?? && record.fitup=='1')>checked</#if>>
+                  <input type="radio" name="fitup" value="2" title="毛坯" <#if (record?? && record.fitup?? && record.fitup=='2')>checked</#if>>
+            </div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+        </div>
 
-
+        <div class="layui-form-item">
+            <label class="layui-form-label">办公类型</label>
+            <div class="layui-input-inline" style="width:70%">
+                  <input type="radio" name="officeType" value="0" title="普通办公" <#if (record?? && record.officeType?? && record.officeType=='0')>checked</#if>>
+                  <input type="radio" name="officeType" value="1" title="共享办公" <#if (record?? && record.officeType?? && record.officeType=='1')>checked</#if>>
+                  <input type="radio" name="officeType" value="2" title="创意园" <#if (record?? && record.officeType?? && record.officeType=='2')>checked</#if>>
+            </div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+        </div>
 
          <div class="layui-form-item">
             <label class="layui-form-label">状态</label>

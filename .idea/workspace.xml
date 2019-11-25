@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fbc680-6164-4f33-9b24-94a00587f493" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,61 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseArea.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseBrowseRecords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="27" />
-              <folding>
-                <element signature="e#1616#1617#0" expanded="true" />
-                <element signature="e#1649#1650#0" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1743#1744#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseHousingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1478">
-              <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="84" column="223" selection-start-line="84" selection-start-column="204" selection-end-line="84" selection-end-column="223" />
+            <state relative-caret-position="177">
+              <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -84,46 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4680#4681#0" expanded="true" />
-                <element signature="e#4699#4700#0" expanded="true" />
-                <element signature="e#12187#12188#0" expanded="true" />
-                <element signature="e#12222#12223#0" expanded="true" />
-                <element signature="e#12278#12279#0" expanded="true" />
-                <element signature="e#12326#12327#0" expanded="true" />
-                <element signature="e#12107#12108#0" expanded="true" />
-                <element signature="e#12138#12139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseShareItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="108" column="31" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -227,10 +141,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/service/XcxUserLoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/service/XcxUserSessionService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_list.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseShareItemController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_input.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" />
         <option value="$PROJECT_DIR$/src/test/java/com/icloud/QueryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/common/MapEntryUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseShareItem.java" />
@@ -243,10 +155,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseBrowseRecordsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseHousingService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl" />
       </list>
     </option>
   </component>
@@ -316,7 +230,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,36 +280,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="xcx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
@@ -452,6 +336,13 @@
             <path>
               <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="house-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="house-project" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -492,31 +383,13 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="house" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="xcx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="xcx" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -632,7 +505,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26407507" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26742628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -644,7 +517,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.4631728" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.18413597" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.11331445" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -676,7 +549,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.4631728" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.18413597" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.11331445" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -737,41 +610,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_housing_input.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="249" column="18" lean-forward="true" selection-start-line="249" selection-start-column="18" selection-end-line="249" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseShareItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-extension/3.2.0/mybatis-plus-extension-3.2.0.jar!/com/baomidou/mybatisplus/extension/service/IService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1083,7 +921,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseHousingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1478">
-          <caret line="102" column="17" lean-forward="true" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1094,34 +932,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/house/model/HouseHousing.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1247">
+          <folding>
+            <element signature="e#0#12635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_browse_records_input.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1002" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        <state relative-caret-position="325">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/house_share_item_list.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="59" column="85" selection-start-line="59" selection-start-column="85" selection-end-line="59" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_new_house_input.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="84" column="223" selection-start-line="84" selection-start-column="204" selection-end-line="84" selection-end-column="223" />
+        <state relative-caret-position="206">
+          <caret line="218" column="90" selection-start-line="218" selection-start-column="28" selection-end-line="218" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_office_building_input.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/house/housing/house_share_office_input.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseHousing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="93" column="29" lean-forward="true" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4680#4681#0" expanded="true" />
-            <element signature="e#4699#4700#0" expanded="true" />
-            <element signature="e#12187#12188#0" expanded="true" />
-            <element signature="e#12222#12223#0" expanded="true" />
-            <element signature="e#12278#12279#0" expanded="true" />
-            <element signature="e#12326#12327#0" expanded="true" />
-            <element signature="e#12107#12108#0" expanded="true" />
-            <element signature="e#12138#12139#0" expanded="true" />
           </folding>
         </state>
       </provider>

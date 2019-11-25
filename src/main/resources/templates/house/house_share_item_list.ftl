@@ -57,6 +57,7 @@
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
                             <i class="layui-icon">&#xe61f;</i> 添加
                        </a>
+                        <a href="javascript:history.go(-1);" class="layui-btn">返回</a>
                      </li>
                  </ul>
             </form>
