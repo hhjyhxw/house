@@ -90,7 +90,7 @@ public class HouseOfficeBuildingController extends BaseIdLongController<HouseHou
     public  BaseResponse update(HouseHousing t){
         try {
             t.setHouseType(1);//分类（1、写字楼、2 新房 3、共享办公、4租房）
-            t.setRentable("1");//是否可以租(0不可以组,1可以组)
+            t.setRentable("0");//是否可以租(0不可以组,1可以组)
             t.setModifyMan(getLoginAdmin().getId().longValue());
             t.setModifyTime(new Date());
             boolean result = baseService.updateById(t);
