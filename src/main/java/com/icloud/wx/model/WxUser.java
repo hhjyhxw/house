@@ -153,4 +153,19 @@ public class WxUser implements Serializable {
 	public String getPhone() {
 		return phone;
 	}
+
+    @Override
+    public String toString() {
+        return "WxUser{" +
+                "id=" + id +
+                ", nickName='" + nickName + '\'' +
+                ", openid='" + openid + '\'' +
+                ", unionid='" + unionid + '\'' +
+                ", headphoto='" + headphoto + '\'' +
+                ", createTime=" + createTime +
+                ", modiftyTime=" + modiftyTime +
+                ", sex=" + sex +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }

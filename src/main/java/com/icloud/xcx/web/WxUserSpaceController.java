@@ -1,13 +1,17 @@
 package com.icloud.xcx.web;
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageInfo;
 import com.icloud.annotation.AuthIgnore;
 import com.icloud.annotation.LoginUser;
 import com.icloud.basecommon.model.Query;
 import com.icloud.common.MapEntryUtils;
+import com.icloud.house.model.HouseFollowRecords;
 import com.icloud.house.model.HouseHousing;
+import com.icloud.house.model.HouseShareItem;
 import com.icloud.house.service.HouseBrowseRecordsService;
+import com.icloud.house.service.HouseFollowRecordsService;
 import com.icloud.house.service.HouseHousingService;
 import com.icloud.wx.model.WxUser;
 import org.slf4j.Logger;
@@ -20,8 +24,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
+/**
+ * 我的足迹
+ */
 @Controller
 @RequestMapping(value = "${xcxPath}/userSpace")
 public class WxUserSpaceController {
@@ -32,6 +41,10 @@ public class WxUserSpaceController {
     private HouseHousingService houseHousingService;
     @Autowired
     private HouseBrowseRecordsService houseBrowseRecordsService;
+    @Autowired
+    private HouseFollowRecordsService houseFollowRecordsService;
+
+
 
 
     /**
@@ -42,7 +55,7 @@ public class WxUserSpaceController {
      */
     @ResponseBody
     @RequestMapping(value = "/myStepList")
-    public Object list(HttpServletRequest request, @RequestBody Map<String, Object> params, @LoginUser WxUser user) {
+    public Object myStepList(HttpServletRequest request, @RequestBody Map<String, Object> params, @LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
 //            Map<String, Object> map = MapEntryUtils.objectToMap(t);
@@ -57,6 +70,107 @@ public class WxUserSpaceController {
             Query query = new Query(params);
             query.put("userId",user.getId());
             PageInfo<HouseHousing> page = houseBrowseRecordsService.findHouseHousingPage(query.getPageNum(), query.getPageSize(), query);
+            JSONObject resultData = new JSONObject();
+            resultData.put("dataList", page.getList());
+            resultData.put("hasMore", page.getPageNum() < page.getPages());
+            resultData.put("totalCount", page.getTotal());
+            resultData.put("pageNo", page.getPageNum());
+            resultData.put("pageSize", page.getPageSize());
+
+            resultJson.put("errCode", "0000");
+            resultJson.put("resultMsg", "获取数据成功");
+            resultJson.put("resultData", resultData);
+        } catch (Exception ex) {
+            log.error("error=====", ex);
+            ex.printStackTrace();
+            resultJson.put("errCode", "0001");
+            resultJson.put("resultMsg", "获取数据失败");
+        }
+        log.error("resultJson=====" + resultJson);
+        return resultJson;
+    }
+
+
+    /**
+     * 添加关注房源
+     * @param request
+     * @param params
+     * @return
+     */
+    @AuthIgnore
+    @ResponseBody
+    @RequestMapping(value = "/follow")
+    public Object detail(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
+        JSONObject resultJson = new JSONObject();
+        try {
+            for (String temp : params.keySet()) {
+                log.info(temp + "=====" + params.get(temp));
+            }
+            if (params.get("id") == null) {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "id参数不能为空");
+                return resultJson;
+            }
+            if (params.get("status") == null) {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "status参数不能为空");
+                return resultJson;
+            }
+            JSONObject resultData = new JSONObject();
+            Object houseHousing = houseHousingService.getById(Long.valueOf(params.get("id").toString()));
+            HouseHousing house = null;
+            if(houseHousing!=null){
+                house = (HouseHousing) houseHousing;
+                //保存或者更新我的足迹
+                if(user!=null){
+                    houseFollowRecordsService.saveOrUpdate(house,user,params.get("status").toString());
+                }else {
+                    resultJson.put("errCode", "1000");
+                    resultJson.put("resultMsg", "用户没登陆");
+                    return resultJson;
+                }
+            }else {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "关注的房子id为空");
+                return resultJson;
+            }
+            resultJson.put("errCode", "0000");
+            resultJson.put("resultMsg", "保存成功");
+        } catch (Exception ex) {
+            log.error("error=====", ex);
+            ex.printStackTrace();
+            resultJson.put("errCode", "0001");
+            resultJson.put("resultMsg", "保存失败");
+        }
+        log.error("resultJson=====" + resultJson);
+        return resultJson;
+    }
+
+
+    /**
+     * 我的关注
+     * @param request
+     * @param params
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/myFollowList")
+    public Object myFollowList(HttpServletRequest request, @RequestBody Map<String, Object> params, @LoginUser WxUser user) {
+        JSONObject resultJson = new JSONObject();
+        try {
+//            Map<String, Object> map = MapEntryUtils.objectToMap(t);
+//            params.putAll(map);
+            for (String temp : params.keySet()) {
+                log.info(temp + "=====" + params.get(temp));
+            }
+            if(user==null){
+                return null;
+            }
+
+            Query query = new Query(params);
+            query.put("userId",user.getId());
+            query.put("status","1");//关注的消息
+            PageInfo<HouseHousing> page = houseFollowRecordsService.findHouseHousingPage(query.getPageNum(), query.getPageSize(), query);
             JSONObject resultData = new JSONObject();
             resultData.put("dataList", page.getList());
             resultData.put("hasMore", page.getPageNum() < page.getPages());
