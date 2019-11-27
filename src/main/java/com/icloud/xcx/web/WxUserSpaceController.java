@@ -92,6 +92,75 @@ public class WxUserSpaceController {
 
 
     /**
+     * 查询是否关注房源
+     * @param request
+     * @param params
+     * @return
+     */
+    @AuthIgnore
+    @ResponseBody
+    @RequestMapping(value = "/checkFollow")
+    public Object checkFollow(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
+        JSONObject resultJson = new JSONObject();
+        try {
+            for (String temp : params.keySet()) {
+                log.info(temp + "=====" + params.get(temp));
+            }
+            log.info("follow_user=====" + (user!=null?user:null));
+            if (params.get("id") == null) {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "id参数不能为空");
+                return resultJson;
+            }
+            if (params.get("status") == null) {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "status参数不能为空");
+                return resultJson;
+            }
+            JSONObject resultData = new JSONObject();
+            Object houseHousing = houseHousingService.getById(Long.valueOf(params.get("id").toString()));
+            HouseHousing house = null;
+            if(houseHousing!=null){
+                house = (HouseHousing) houseHousing;
+                //保存或者更新我的足迹
+                if(user!=null){
+                    Object houseFollowRecordsObj = houseFollowRecordsService.getOne(new QueryWrapper<HouseFollowRecords>()
+                            .eq("house_id",house.getId()).eq("user_id",user.getId()));
+                    if(houseFollowRecordsObj!=null){
+                        HouseFollowRecords records = (HouseFollowRecords) houseFollowRecordsObj;
+                        if("1".equals(records.getStatus())){
+                            resultJson.put("errCode", "0000");
+                            resultJson.put("status", "1");
+                            resultJson.put("resultMsg", "用户已关注");
+                            return resultJson;
+                        }
+                    }
+                    resultJson.put("errCode", "0000");
+                    resultJson.put("status", "0");
+                    resultJson.put("resultMsg", "用户未关注");
+                    return resultJson;
+                }else {
+                    resultJson.put("errCode", "1000");
+                    resultJson.put("resultMsg", "用户没登陆");
+                    return resultJson;
+                }
+            }else {
+                resultJson.put("errCode", "1000");
+                resultJson.put("resultMsg", "关注的房子id为空");
+                return resultJson;
+            }
+        } catch (Exception ex) {
+            log.error("error=====", ex);
+            ex.printStackTrace();
+            resultJson.put("errCode", "0001");
+            resultJson.put("resultMsg", "保存失败");
+        }
+        log.error("resultJson=====" + resultJson);
+        return resultJson;
+    }
+
+
+    /**
      * 添加关注房源
      * @param request
      * @param params
@@ -100,12 +169,13 @@ public class WxUserSpaceController {
     @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/follow")
-    public Object detail(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
+    public Object follow(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             for (String temp : params.keySet()) {
                 log.info(temp + "=====" + params.get(temp));
             }
+            log.info("follow_user=====" + (user!=null?user:null));
             if (params.get("id") == null) {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "id参数不能为空");
