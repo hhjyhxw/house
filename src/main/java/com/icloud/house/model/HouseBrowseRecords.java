@@ -13,7 +13,7 @@ import java.util.Date;
  * @email 512162086@qq.com
  * @date 2019-11-01 21:46:51
  */
-@TableName("t_house_browse")
+@TableName("t_house_browse_records")
 public class HouseBrowseRecords implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

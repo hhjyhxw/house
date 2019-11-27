@@ -66,6 +66,7 @@ public class HouseOfficeBuildingRentController extends BaseIdLongController<Hous
             t.setRentable("1");//是否可以租(0不可以组,1可以组)
             t.setPubUser(StringUtil.checkStr(getLoginAdmin().getShopIds())?Long.parseLong(getLoginAdmin().getShopIds()):null);
             t.setCreateMan(getLoginAdmin().getId().longValue());
+            t.setPhone(getLoginAdmin().getPhone());
             t.setCreateTime(new Date());
             boolean result = baseService.save(t);
             if(result)

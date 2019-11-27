@@ -16,5 +16,5 @@ import java.util.Map;
  */
 public interface HouseBrowseRecordsMapper extends BaseMapper<HouseBrowseRecords> {
 
-    List<HouseHousing> selectList(Map<String,Object> params);
+    List<HouseHousing> findForList(Map<String,Object> params);
 }

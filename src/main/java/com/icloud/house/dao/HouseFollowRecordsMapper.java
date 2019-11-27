@@ -14,5 +14,5 @@ import java.util.Map;
  * @date 2019-11-25 10:02:55
  */
 public interface HouseFollowRecordsMapper extends BaseMapper<HouseFollowRecords> {
-    List<HouseHousing> selectList(Map<String,Object> params);
+    List<HouseHousing> findForList(Map<String,Object> params);
 }

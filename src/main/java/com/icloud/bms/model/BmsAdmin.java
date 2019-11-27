@@ -25,6 +25,8 @@ public class BmsAdmin extends BaseModel implements Serializable{
     
     private String shopIds;
 
+    private String phone;
+
     public Integer getId() {
         return id;
     }
@@ -80,6 +82,12 @@ public class BmsAdmin extends BaseModel implements Serializable{
 	public void setShopIds(String shopIds) {
 		this.shopIds = shopIds;
 	}
-    
-    
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }

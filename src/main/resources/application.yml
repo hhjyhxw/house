@@ -6,6 +6,9 @@ server:
         min-spare-threads: 10
     port: 8080
     context-path: /
+    servlet: /
+      session:
+        timeout: 600s
 # mysql
 spring:
     # 环境 dev|test|pro

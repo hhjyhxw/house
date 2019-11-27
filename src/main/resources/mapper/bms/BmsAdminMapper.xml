@@ -9,9 +9,10 @@
     <result column="is_lock" property="isLock" jdbcType="VARCHAR" />
     <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
     <result column="shop_ids" property="shopIds" jdbcType="VARCHAR" />
+      <result column="phone" property="phone" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, account, password_prompt, pass_word, is_lock, create_date,shop_ids
+    id, account, password_prompt, pass_word, is_lock, create_date,shop_ids,phone
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 

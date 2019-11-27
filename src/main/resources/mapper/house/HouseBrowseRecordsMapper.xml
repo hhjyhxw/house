@@ -17,8 +17,8 @@
 id,house_id,create_time,user_id
     </sql>
 
-    <select id="selectList" parameterType="java.util.Map" resultMap="BaseResultMap">
-        select h.* from t_house_housing h,t_house_browse b
+    <select id="findForList" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select h.* from t_house_housing h,t_house_follow_records b
         <where>
             h.id = b.house_id and and t.user_id = #{userId,jdbcType=BIGINT}
             <if test="id != null" >

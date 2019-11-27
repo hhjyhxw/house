@@ -172,6 +172,11 @@ public class HouseHousing implements Serializable {
     @TableField("office_type")
     private String officeType;
 
+    /* 发布人手机*/
+    @TableField("phone")
+    private String phone;
+
+
    	
 	/**
 	 * 设置：
@@ -672,6 +677,14 @@ public class HouseHousing implements Serializable {
 
     public void setOfficeType(String officeType) {
         this.officeType = officeType;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public List<HouseShareItem> getItemList() {

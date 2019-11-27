@@ -39,7 +39,7 @@ public class HouseBrowseRecordsService extends MybaseServiceImpl<HouseBrowseReco
      */
     public PageInfo<HouseHousing> findHouseHousingPage(int pageNum, int pageSize, Query query) {
         PageHelper.startPage(pageNum, pageSize);
-        List<HouseHousing> list = houseBrowseRecordsMapper.selectList(query);
+        List<HouseHousing> list = houseBrowseRecordsMapper.findForList(query);
         PageInfo<HouseHousing> page = new PageInfo<HouseHousing>(list);
         return page;
     }

@@ -5,7 +5,6 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.icloud.basecommon.model.Query;
 import com.icloud.house.dao.HouseFollowRecordsMapper;
-import com.icloud.house.model.HouseBrowseRecords;
 import com.icloud.house.model.HouseFollowRecords;
 import com.icloud.basecommon.service.MybaseServiceImpl;
 import com.icloud.house.model.HouseHousing;
@@ -41,7 +40,7 @@ public class HouseFollowRecordsService extends MybaseServiceImpl<HouseFollowReco
      */
     public PageInfo<HouseHousing> findHouseHousingPage(int pageNum, int pageSize, Query query) {
         PageHelper.startPage(pageNum, pageSize);
-        List<HouseHousing> list = houseFollowRecordsMapper.selectList(query);
+        List<HouseHousing> list = houseFollowRecordsMapper.findForList(query);
         PageInfo<HouseHousing> page = new PageInfo<HouseHousing>(list);
         return page;
     }

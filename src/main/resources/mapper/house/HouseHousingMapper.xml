@@ -50,6 +50,7 @@
         <result property="imageUrl" column="image_url"/>
         <result property="newhouseType" column="newhouse_type"/>
         <result property="officeType" column="office_type"/>
+        <result property="phone" column="phone"/>
 
 
     </resultMap>
