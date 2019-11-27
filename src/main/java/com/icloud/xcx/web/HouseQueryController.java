@@ -119,7 +119,7 @@ public class HouseQueryController {
                     itemList.add(houseShareItem);
                 }
                 //保存或者更新我的足迹
-                if(user!=null){
+                if(user!=null && user.getId()!=null){
                     houseBrowseRecordsService.saveOrUpdate(house,user);
                 }
             }

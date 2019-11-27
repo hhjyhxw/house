@@ -45,6 +45,7 @@ public class HouseBrowseRecordsService extends MybaseServiceImpl<HouseBrowseReco
     }
 
     public void saveOrUpdate(HouseHousing house, WxUser user){
+
         List<HouseBrowseRecords> list = houseBrowseRecordsMapper.selectList(new QueryWrapper<HouseBrowseRecords>()
                 .eq("house_id",house.getId()).eq("user_id",user.getId()));
         if(list!=null && list.size()>0){

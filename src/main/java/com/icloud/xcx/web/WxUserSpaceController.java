@@ -123,7 +123,7 @@ public class WxUserSpaceController {
             if(houseHousing!=null){
                 house = (HouseHousing) houseHousing;
                 //保存或者更新我的足迹
-                if(user!=null){
+                if(user!=null && user.getId()!=null){
                     Object houseFollowRecordsObj = houseFollowRecordsService.getOne(new QueryWrapper<HouseFollowRecords>()
                             .eq("house_id",house.getId()).eq("user_id",user.getId()));
                     if(houseFollowRecordsObj!=null){
@@ -192,7 +192,7 @@ public class WxUserSpaceController {
             if(houseHousing!=null){
                 house = (HouseHousing) houseHousing;
                 //保存或者更新我的足迹
-                if(user!=null){
+                if(user!=null && user.getId()!=null){
                     houseFollowRecordsService.saveOrUpdate(house,user,params.get("status").toString());
                 }else {
                     resultJson.put("errCode", "1000");
