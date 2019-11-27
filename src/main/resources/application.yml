@@ -6,7 +6,7 @@ server:
         min-spare-threads: 10
     port: 8080
     context-path: /
-    servlet: /
+    servlet:
       session:
         timeout: 600s
 # mysql
