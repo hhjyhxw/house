@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -37,7 +38,7 @@ public class HousePubController {
      */
     @ResponseBody
     @RequestMapping(value = "/newHousePub")
-    public Object list(HttpServletRequest request, HouseHousing t, @LoginUser WxUser user) {
+    public Object list(HttpServletRequest request, @RequestBody HouseHousing t, @LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             t.setHouseType(2);//分类（1、写字楼、2 新房 3、共享办公、4租房）
@@ -45,6 +46,7 @@ public class HousePubController {
             t.setPubUser(user.getId());
             t.setCreateMan(user.getId());
             t.setCreateTime(new Date());
+            houseHousingService.save(t);
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "发布成功");
         } catch (Exception ex) {
@@ -64,7 +66,7 @@ public class HousePubController {
      */
     @ResponseBody
     @RequestMapping(value = "/officeBuildingPub")
-    public Object officeBuildingPub(HttpServletRequest request, HouseHousing t, @LoginUser WxUser user) {
+    public Object officeBuildingPub(HttpServletRequest request, @RequestBody HouseHousing t, @LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             t.setHouseType(1);//分类（1、写字楼、2 新房 3、共享办公、4租房）
@@ -72,6 +74,7 @@ public class HousePubController {
             t.setPubUser(user.getId());
             t.setCreateMan(user.getId());
             t.setCreateTime(new Date());
+            houseHousingService.save(t);
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "发布成功");
         } catch (Exception ex) {
@@ -91,7 +94,7 @@ public class HousePubController {
      */
     @ResponseBody
     @RequestMapping(value = "/officeBuildingRentPub")
-    public Object officeBuildingRentPub(HttpServletRequest request, HouseHousing t, @LoginUser WxUser user) {
+    public Object officeBuildingRentPub(HttpServletRequest request, @RequestBody HouseHousing t, @LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             t.setHouseType(1);//分类（1、写字楼、2 新房 3、共享办公、4租房）
@@ -99,6 +102,7 @@ public class HousePubController {
             t.setPubUser(user.getId());
             t.setCreateMan(user.getId());
             t.setCreateTime(new Date());
+            houseHousingService.save(t);
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "发布成功");
         } catch (Exception ex) {
@@ -118,7 +122,7 @@ public class HousePubController {
      */
     @ResponseBody
     @RequestMapping(value = "/shareOfficePub")
-    public Object shareOfficePub(HttpServletRequest request, HouseHousing t, @LoginUser WxUser user) {
+    public Object shareOfficePub(HttpServletRequest request, @RequestBody HouseHousing t, @LoginUser WxUser user) {
         JSONObject resultJson = new JSONObject();
         try {
             t.setHouseType(3);//分类（1、写字楼、2 新房 3、共享办公、4租房）
@@ -126,6 +130,7 @@ public class HousePubController {
             t.setPubUser(user.getId());
             t.setCreateMan(user.getId());
             t.setCreateTime(new Date());
+            houseHousingService.save(t);
             resultJson.put("errCode", "0000");
             resultJson.put("resultMsg", "发布成功");
         } catch (Exception ex) {

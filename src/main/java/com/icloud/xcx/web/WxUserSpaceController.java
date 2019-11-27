@@ -110,11 +110,13 @@ public class WxUserSpaceController {
             if (params.get("id") == null) {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "id参数不能为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
             if (params.get("status") == null) {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "status参数不能为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
             JSONObject resultData = new JSONObject();
@@ -132,6 +134,7 @@ public class WxUserSpaceController {
                             resultJson.put("errCode", "0000");
                             resultJson.put("status", "1");
                             resultJson.put("resultMsg", "用户已关注");
+                            log.error("resultJson=====" + resultJson);
                             return resultJson;
                         }
                     }
@@ -142,11 +145,13 @@ public class WxUserSpaceController {
                 }else {
                     resultJson.put("errCode", "1000");
                     resultJson.put("resultMsg", "用户没登陆");
+                    log.error("resultJson=====" + resultJson);
                     return resultJson;
                 }
             }else {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "关注的房子id为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
         } catch (Exception ex) {
@@ -179,11 +184,13 @@ public class WxUserSpaceController {
             if (params.get("id") == null) {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "id参数不能为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
             if (params.get("status") == null) {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "status参数不能为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
             JSONObject resultData = new JSONObject();
@@ -197,11 +204,13 @@ public class WxUserSpaceController {
                 }else {
                     resultJson.put("errCode", "1000");
                     resultJson.put("resultMsg", "用户没登陆");
+                    log.error("resultJson=====" + resultJson);
                     return resultJson;
                 }
             }else {
                 resultJson.put("errCode", "1000");
                 resultJson.put("resultMsg", "关注的房子id为空");
+                log.error("resultJson=====" + resultJson);
                 return resultJson;
             }
             resultJson.put("errCode", "0000");
