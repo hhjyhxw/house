@@ -130,13 +130,21 @@ public class WxUserSpaceController {
                     if(houseFollowRecordsObj!=null){
                         HouseFollowRecords records = (HouseFollowRecords) houseFollowRecordsObj;
                         if("1".equals(records.getStatus())){
+
+                            resultData.put("status", "1");
+                            resultData.put("resultMsg", "用户已关注");
+
+                            resultJson.put("resultData", resultData);
                             resultJson.put("errCode", "0000");
-                            resultJson.put("status", "1");
                             resultJson.put("resultMsg", "用户已关注");
                             log.error("resultJson=====" + resultJson);
                             return resultJson;
                         }
                     }
+                    resultData.put("status", "0");
+                    resultData.put("resultMsg", "用户未关注");
+
+                    resultJson.put("resultData", resultData);
                     resultJson.put("errCode", "0000");
                     resultJson.put("status", "0");
                     resultJson.put("resultMsg", "用户未关注");

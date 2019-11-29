@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fbc680-6164-4f33-9b24-94a00587f493" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
+            <state relative-caret-position="-799">
               <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -35,8 +35,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+            <state relative-caret-position="498">
+              <caret line="208" column="54" selection-start-line="208" selection-start-column="54" selection-end-line="208" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseFollowRecordsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,15 +57,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseHousingService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-200">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="140">
               <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
               <folding>
                 <element signature="e#897#898#0" expanded="true" />
@@ -174,11 +186,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" />
       </list>
     </option>
   </component>
@@ -536,7 +548,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.34985834" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.18271954" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -569,7 +581,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.34985834" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" visible="true" weight="0.18271954" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -584,7 +596,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.16823056" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.16823056" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -684,16 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseFollowRecordsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,20 +998,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseHousingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-200">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        <state relative-caret-position="140">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="-799">
           <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1017,13 +1023,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/basecommon/model/Query.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        <state relative-caret-position="498">
+          <caret line="208" column="54" selection-start-line="208" selection-start-column="54" selection-end-line="208" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseFollowRecordsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding>
-            <element signature="e#897#898#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
