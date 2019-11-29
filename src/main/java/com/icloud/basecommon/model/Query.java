@@ -20,9 +20,13 @@ public class Query extends LinkedHashMap<String, Object> {
         if(params.get("pageNum")!=null) {
             this.pageNum = Integer.parseInt(params.get("pageNum").toString());
         }
+        if(params.get("pageNo")!=null) {
+            this.pageNum = Integer.parseInt(params.get("pageNo").toString());
+        }
         if(params.get("pageSize")!=null) {
             this.pageSize = Integer.parseInt(params.get("pageSize").toString());
         }
+        this.remove("pageNo");
         this.remove("pageNum");
         this.remove("pageSize");
     }
