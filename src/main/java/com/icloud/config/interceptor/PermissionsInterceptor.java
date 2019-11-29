@@ -9,6 +9,7 @@ import com.icloud.common.ResponseUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.NamedThreadLocal;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,6 +29,7 @@ import java.util.List;
  * @author leiyi
  *
  */
+@Component
 public class PermissionsInterceptor implements HandlerInterceptor {
 	
 	public static final String NO_INTERCEPTOR_PATH = ".*((_del)|(_getList)|(_input))";	//不对匹配该值的访问路径拦截（正则）
@@ -54,7 +56,7 @@ public class PermissionsInterceptor implements HandlerInterceptor {
 //		printlnVisitInfo(request,handler);
 		if(null==obj){
 //			response.sendRedirect("/hyzypay/tologin");
-            response.sendRedirect("/tologin");
+            response.sendRedirect("/house/tologin");
 			return false;
 		}
         if (request.getHeader("x-requested-with") != null && request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest"))

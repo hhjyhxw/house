@@ -1,39 +1,49 @@
 package com.icloud.config.interceptor;
 
+import com.icloud.config.resolver.LoginUserHandlerMethodArgumentResolver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.List;
 
 /**
  * 配置拦截器
  */
 @Configuration
-public class InterceptorStack {
+class InterceptorsStack implements WebMvcConfigurer {
 
 
-	@Configuration
-	public static class WebMvcConfigurer extends WebMvcConfigurerAdapter {
+    @Autowired
+    private LoginUserHandlerMethodArgumentResolver loginUserHandlerMethodArgumentResolver;
+    @Autowired
+    private XcxLoginInterceptor xcxLoginInterceptor;
+    @Autowired
+    private PermissionsInterceptor permissionsInterceptor;
 
-//		@Bean
-//		public WxUserLoginInterceptor getWxUserLoginInterceptor()
-//		{
-//			return new WxUserLoginInterceptor();
-//		}
-		public void addInterceptors(InterceptorRegistry registry) {
-//			registry.addInterceptor(new XssCsrfInterceptor()).addPathPatterns("/**").excludePathPatterns("/thirdInterfacePath/**")
-//					.excludePathPatterns("/beanGoods/goodsDetail").excludePathPatterns("/checkToken/removeToken")
-//					.excludePathPatterns("/backpage/setting/beforeUpdate").excludePathPatterns("/backpage/setting/update");
-            //xcxUserLogin小程序端登陆拦截
-            registry.addInterceptor(new XcxLoginInterceptor()).addPathPatterns("/xcxpath/**")
-                    .excludePathPatterns("/xcxpath/xcxUserLogin/**");
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new XssCsrfInterceptor()).addPathPatterns(new String[] { "/**" }).excludePathPatterns(new String[] { "/thirdInterfacePath/**" })
+//                .excludePathPatterns(new String[] { "/beanGoods/goodsDetail" })
+//                .excludePathPatterns(new String[] { "/checkToken/removeToken" })
+//                .excludePathPatterns(new String[] { "/backpage/setting/beforeUpdate" })
+//                .excludePathPatterns(new String[] { "/backpage/setting/update" });
+        registry.addInterceptor(permissionsInterceptor).addPathPatterns(new String[] { "/admin/**" }).addPathPatterns(new String[] { "/backpage/**" });
+//        registry.addInterceptor(new AddTokenInterceptor()).addPathPatterns(new String[] { "/beanGoods/goodsDetail" });
+//        registry.addInterceptor(new RemoveTokenInterceptor()).addPathPatterns(new String[] { "/checkToken/removeToken" });
+        registry.addInterceptor(xcxLoginInterceptor).addPathPatterns(new String[] { "/xcxpath/**" }).excludePathPatterns(new String[] { "/xcxpath/xcxUserLogin/**" });
+//        registry.addInterceptor(new ThirdInterfaceInterceptor()).addPathPatterns(new String[] { "/thirdInterfacePath/**" });
+    }
 
-		    registry.addInterceptor(new PermissionsInterceptor()).addPathPatterns("/admin/**").addPathPatterns("/backpage/**");
-//			registry.addInterceptor(new AddTokenInterceptor()).addPathPatterns("/beanGoods/goodsDetail");
-//		    registry.addInterceptor(new RemoveTokenInterceptor()).addPathPatterns("/checkToken/removeToken");
-//            registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/frontpage/**"); //手机端拦截
-////            registry.addInterceptor(getWxUserLoginInterceptor()).addPathPatterns("/frontpage/**"); //手机端拦截 本地
-//			registry.addInterceptor(new ThirdInterfaceInterceptor()).addPathPatterns("/thirdInterfacePath/**"); //第三方接口拦截
-		}
-	}
+    /**
+     * 参数处理拦截
+     * @param argumentResolvers
+     */
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
+        argumentResolvers.add(loginUserHandlerMethodArgumentResolver);
+    }
 }

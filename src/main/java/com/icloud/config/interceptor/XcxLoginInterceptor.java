@@ -10,6 +10,7 @@ import com.icloud.xcx.util.XcxUserSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -19,6 +20,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class XcxLoginInterceptor extends HandlerInterceptorAdapter {
     private Logger log = LoggerFactory.getLogger(getClass());
     // @Autowired
@@ -62,6 +64,7 @@ public class XcxLoginInterceptor extends HandlerInterceptorAdapter {
         }
 
         //2、
+        log.info("redisService===="+redisService);
         Object unionid = redisService.get(accessToken);
         if(!StringUtil.checkObj(unionid)){
             log.info("根据accessToken从缓存获取unionid为空，访问失败");
