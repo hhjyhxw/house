@@ -97,7 +97,6 @@ public class WxUserSpaceController {
      * @param params
      * @return
      */
-    @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/checkFollow")
     public Object checkFollow(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {
@@ -171,7 +170,6 @@ public class WxUserSpaceController {
      * @param params
      * @return
      */
-    @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/follow")
     public Object follow(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {

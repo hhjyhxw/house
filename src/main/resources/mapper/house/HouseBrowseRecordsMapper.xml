@@ -12,20 +12,69 @@
      <result property="userId" column="user_id"/>
     </resultMap>
 
+    <!-- house map -->
+    <resultMap type="com.icloud.house.model.HouseHousing" id="HoueBaseResultMap">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="minTotalPrice" column="min_total_price"/>
+        <result property="maxTotalPrice" column="max_total_price"/>
+        <result property="minUnitPrice" column="min_unit_price"/>
+        <result property="maxUnitPrice" column="max_unit_price"/>
+        <result property="averagePriice" column="average_priice"/>
+        <result property="minHouseArea" column="min_house_area"/>
+        <result property="maxHouseArea" column="max_house_area"/>
+        <result property="storey" column="storey"/>
+        <result property="houseType" column="house_type"/>
+        <result property="status" column="status"/>
+        <result property="describes" column="describes"/>
+        <result property="introductionDetail" column="introduction_detail"/>
+        <result property="baseServicer" column="base_servicer"/>
+        <result property="enterpriseServicer" column="enterprise_servicer"/>
+        <result property="village" column="village"/>
+        <result property="addesses" column="addesses"/>
+        <result property="houseSources" column="house_sources"/>
+        <result property="rentWay" column="rent_way"/>
+        <result property="buildArea" column="build_area"/>
+        <result property="openDate" column="open_date"/>
+        <result property="intoDate" column="into_date"/>
+        <result property="lng" column="lng"/>
+        <result property="lat" column="lat"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="county" column="county"/>
+        <result property="towns" column="towns"/>
+        <result property="pubUser" column="pub_user"/>
+        <result property="tags" column="tags"/>
+        <result property="features" column="features"/>
+        <result property="fitup" column="fitup"/>
+        <result property="houseClasss" column="house_classs"/>
+        <result property="specifyes" column="specifyes"/>
+        <result property="latest" column="latest"/>
+        <result property="propertyType" column="property_type"/>
+        <result property="rentable" column="rentable"/>
+        <result property="createTime" column="create_time"/>
+        <result property="modifyMan" column="modify_man"/>
+        <result property="modifyTime" column="modify_time"/>
+        <result property="createMan" column="create_man"/>
+        <result property="imageUrl" column="image_url"/>
+        <result property="newhouseType" column="newhouse_type"/>
+        <result property="officeType" column="office_type"/>
+        <result property="phone" column="phone"/>
+
+
+    </resultMap>
+
    <!-- 基础字段列 -->
    <sql id="Base_Column_List" >
 id,house_id,create_time,user_id
     </sql>
 
-    <select id="findForList" parameterType="java.util.Map" resultMap="BaseResultMap">
+    <select id="findForList" parameterType="java.util.Map" resultMap="HoueBaseResultMap">
         select h.* from t_house_housing h,t_house_follow_records b
         <where>
-            h.id = b.house_id and and t.user_id = #{userId,jdbcType=BIGINT}
-            <if test="id != null" >
-                and t.id =  #{id,jdbcType=BIGINT}
-            </if>
+            h.id = b.house_id
             <if test="userId != null" >
-                and t.user_id =  #{userId,jdbcType=BIGINT}
+                and b.user_id =  #{userId,jdbcType=BIGINT}
             </if>
         </where>
     </select>

@@ -86,7 +86,6 @@ public class HouseQueryController {
      * @param params
      * @return
      */
-    @AuthIgnore
     @ResponseBody
     @RequestMapping(value = "/detail")
     public Object detail(HttpServletRequest request, @RequestBody Map<String, Object> params,@LoginUser WxUser user) {

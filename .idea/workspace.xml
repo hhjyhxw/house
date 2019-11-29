@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6fbc680-6164-4f33-9b24-94a00587f493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,10 +25,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/resolver/LoginUserHandlerMethodArgumentResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="525">
+              <caret line="38" column="56" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1300">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,79 +55,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/config/interceptor/InterceptorsStack.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseBrowseRecordsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-525">
-              <folding>
-                <element signature="e#0#1515#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-59">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/config/interceptor/RemoveTokenInterceptor.class">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#2082#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/config/interceptor/PermissionsInterceptor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#5563#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/config/interceptor/ThirdInterfaceInterceptor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#2195#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/com/icloud/config/interceptor/XcxLoginInterceptor.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/resolver/LoginUserHandlerMethodArgumentResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="303">
+              <caret line="64" column="16" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="64" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+            <state relative-caret-position="403">
+              <caret line="72" column="87" selection-start-line="72" selection-start-column="87" selection-end-line="72" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="35" />
+            <state relative-caret-position="125">
+              <caret line="5" selection-start-line="5" selection-end-line="55" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/annotation/LoginUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/wx/model/WxUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -217,12 +223,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/dao/HouseFollowRecordsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseBrowseRecords.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseFollowRecords.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseFollowRecordsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseBrowseRecordsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HousePubController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/basecommon/web/upload/XcxUploadController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
@@ -231,6 +233,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/InterceptorStack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml" />
       </list>
     </option>
   </component>
@@ -340,56 +346,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-              <item name="InterceptorStack.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="resolver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="xcx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,6 +390,23 @@
               <item name="house-project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="house-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="house" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="house-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -469,17 +442,7 @@
               <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="house-project" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="icloud" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="xcx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="house-project" type="b2602c69:ProjectViewProjectNode" />
@@ -489,6 +452,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="icloud" type="462c0819:PsiDirectoryNode" />
               <item name="xcx" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -618,7 +582,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3378016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29423591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -630,7 +594,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.34985834" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.07648725" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -651,7 +615,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3378016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29423591" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -663,7 +627,7 @@
       <window_info anchor="bottom" id="Messages" order="1" weight="0.44334278" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49932975" weight="0.34985834" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" visible="true" weight="0.07648725" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.85790884" visible="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49932975" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -729,13 +693,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseTagsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/web/HouseOfficeBuildingRentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -795,42 +752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/model/HouseFollowRecords.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/wx/model/WxUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-          <folding>
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1361#1362#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,13 +766,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseBrowseRecordsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
@@ -870,16 +788,6 @@
             <element signature="e#12890#12891#0" expanded="true" />
             <element signature="e#12932#12933#0" expanded="true" />
             <element signature="e#12966#12967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2594">
-          <caret line="121" column="51" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -936,13 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5250">
           <caret line="210" column="44" selection-start-line="210" selection-start-column="44" selection-end-line="210" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="33" selection-start-line="33" selection-end-line="34" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1046,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/resolver/LoginUserHandlerMethodArgumentResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/PermissionsInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1111,10 +1005,80 @@
         <state relative-caret-position="-450" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/wx/model/WxUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/interceptor/XcxLoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+        <state relative-caret-position="242">
+          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/config/resolver/LoginUserHandlerMethodArgumentResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/annotation/LoginUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/WxUserSpaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/xcx/web/HouseQueryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="121" column="53" selection-start-line="121" selection-start-column="53" selection-end-line="121" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/icloud/house/service/HouseBrowseRecordsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseHousingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" selection-start-line="5" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseBrowseRecordsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="64" column="16" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/house/HouseFollowRecordsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="72" column="87" selection-start-line="72" selection-start-column="87" selection-end-line="72" selection-end-column="87" />
         </state>
       </provider>
     </entry>
