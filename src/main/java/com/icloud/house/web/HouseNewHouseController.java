@@ -3,6 +3,7 @@ package com.icloud.house.web;
 import com.github.pagehelper.PageInfo;
 import com.icloud.annotation.SysLog;
 import com.icloud.basecommon.model.Query;
+import com.icloud.basecommon.util.BaiduMapUtil;
 import com.icloud.basecommon.web.BaseIdLongController;
 import com.icloud.common.msg.BaseResponse;
 import com.icloud.common.util.StringUtil;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Map;
 
@@ -60,6 +62,15 @@ public class HouseNewHouseController extends BaseIdLongController<HouseHousingSe
             t.setCreateMan(getLoginAdmin().getId().longValue());
             t.setPhone(getLoginAdmin().getPhone());
             t.setCreateTime(new Date());
+            try {
+                if(StringUtil.checkStr(t.getVillage())){
+                    String[] coordinate = BaiduMapUtil.getCoordinate(t.getVillage());
+                    t.setLng(coordinate[0]!=null?new BigDecimal(coordinate[0]):null);
+                    t.setLat(coordinate[1]!=null?new BigDecimal(coordinate[1]):null);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
             boolean result = baseService.save(t);
             if(result)
                 return new BaseResponse(200,"0000","保存成功");
@@ -85,6 +96,15 @@ public class HouseNewHouseController extends BaseIdLongController<HouseHousingSe
             t.setRentable("0");//是否可以租(0不可以组,1可以组)
             t.setModifyMan(getLoginAdmin().getId().longValue());
             t.setModifyTime(new Date());
+            try {
+                if(StringUtil.checkStr(t.getVillage())){
+                    String[] coordinate = BaiduMapUtil.getCoordinate(t.getVillage());
+                    t.setLng(coordinate[0]!=null?new BigDecimal(coordinate[0]):null);
+                    t.setLat(coordinate[1]!=null?new BigDecimal(coordinate[1]):null);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
             boolean result = baseService.updateById(t);
             if(result)
                 return new BaseResponse(200,"0000","更新成功");

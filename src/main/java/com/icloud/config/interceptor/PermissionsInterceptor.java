@@ -59,22 +59,23 @@ public class PermissionsInterceptor implements HandlerInterceptor {
             response.sendRedirect("/house/tologin");
 			return false;
 		}
-        if (request.getHeader("x-requested-with") != null && request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest"))
-        {
-            return true;
-        }
-        String requestPath = request.getServletPath();
-		if(requestPath.matches(NO_INTERCEPTOR_PATH)){
-			return true;
-		}
-		List<BmsMenu> adminMenu = (List<BmsMenu>) session.getAttribute("admin_menu");
-		for(BmsMenu m:adminMenu){
-			if(m.getMenuUrl().indexOf(requestPath)>=0){
-				return true;
-			}
-		}
-	    ResponseUtils.renderText(response, "您暂无权限");
-		return false;
+		return true;
+//        if (request.getHeader("x-requested-with") != null && request.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest"))
+//        {
+//            return true;
+//        }
+//        String requestPath = request.getServletPath();
+//		if(requestPath.matches(NO_INTERCEPTOR_PATH)){
+//			return true;
+//		}
+//		List<BmsMenu> adminMenu = (List<BmsMenu>) session.getAttribute("admin_menu");
+//		for(BmsMenu m:adminMenu){
+//			if(m.getMenuUrl().indexOf(requestPath)>=0){
+//				return true;
+//			}
+//		}
+//	    ResponseUtils.renderText(response, "您暂无权限");
+//		return false;
 	}
 
 	@Override
