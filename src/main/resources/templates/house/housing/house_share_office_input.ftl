@@ -65,6 +65,14 @@
         </div>
 
          <div class="layui-form-item">
+            <label class="layui-form-label">均价</label>
+            <div class="layui-input-inline" style="width:70%">
+                <input type="number" name="averagePriice" lay-verify="required" id="averagePriice" value="${(record.averagePriice?c)!''}" placeholder="/元/工位/每月" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/元/工位/每月)</span></div>
+        </div>
+
+         <div class="layui-form-item">
             <label class="layui-form-label">总价</label>
             <div class="layui-input-inline" style="width:70%">
                 <input type="number" name="minTotalPrice" lay-verify="required" id="minTotalPrice" value="${(record.minTotalPrice?c)!''}" placeholder="总价" autocomplete="off" class="layui-input">
@@ -79,6 +87,13 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
         </div>
+         <div class="layui-form-item">
+              <label class="layui-form-label">最大面积</label>
+              <div class="layui-input-inline" style="width:70%">
+                  <input type="number" name="maxHouseArea" lay-verify="required" id="maxHouseArea" value="${(record.maxHouseArea?c)!''}" placeholder="面积" autocomplete="off" class="layui-input">
+              </div>
+              <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
+          </div>
  <#--
         <div class="layui-form-item">
             <label class="layui-form-label">物业类型</label>
