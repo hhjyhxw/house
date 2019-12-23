@@ -59,6 +59,8 @@ public class HouseQueryController {
                 log.info(temp + "=====" + params.get(temp));
             }
             Query query = new Query(params);
+            log.info("query.getPageNum()=====" + query.getPageNum());
+            log.info("query.getPageSize()=====" + query.getPageSize());
             PageInfo<HouseHousing> page = houseHousingService.findByPage(query.getPageNum(), query.getPageSize(), query);
             JSONObject resultData = new JSONObject();
             resultData.put("dataList", page.getList());

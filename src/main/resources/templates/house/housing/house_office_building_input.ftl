@@ -98,7 +98,7 @@
        <div class="layui-form-item">
             <label class="layui-form-label">建筑面积</label>
             <div class="layui-input-inline" style="width:70%">
-                <input type="number" name="buildArea" lay-verify="required" id="buildArea" value="${(record.buildArea?c)!''}" placeholder="面积" autocomplete="off" class="layui-input">
+                <input type="number" name="buildArea" lay-verify="required" id="buildArea" value="${(record.buildArea)!''}" placeholder="面积" autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*(单位/平方米)</span></div>
         </div>

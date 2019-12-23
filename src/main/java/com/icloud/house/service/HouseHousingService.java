@@ -1,6 +1,7 @@
 package com.icloud.house.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.icloud.common.MapEntryUtils;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,17 +63,17 @@ public class HouseHousingService extends MybaseServiceImpl<HouseHousingMapper,Ho
             for (Map.Entry<String, Object> entry : oldquery.entrySet()) {
                 if(entry.getValue()!=null && !"".equals(entry.getValue().toString())) {
                    if("minTotalPriceStart".equals(entry.getKey())) {//总价
-                        qw.gt("min_total_price", entry.getKey());
+                        qw.ge("min_total_price", entry.getValue());
                     }else if("minTotalPriceEnd".equals(entry.getKey())) {
-                        qw.lt("min_total_price", entry.getKey());
+                        qw.le("min_total_price", entry.getValue());
                     }else if("minUnitPriceStart".equals(entry.getKey())) {//单价
-                        qw.gt("min_unit_price", entry.getKey());
+                        qw.ge("min_unit_price", entry.getValue());
                     }else if("minUnitPriceEnd".equals(entry.getKey())) {
-                        qw.lt("min_unit_price", entry.getKey());
+                        qw.le("min_unit_price", entry.getValue());
                     }else if("minHouseAreaStart".equals(entry.getKey())) {//面积
-                        qw.gt("min_house_area", entry.getKey());
+                        qw.ge("min_house_area", entry.getValue());
                     }else if("minHouseAreaEnd".equals(entry.getKey())) {
-                        qw.lt("min_house_area", entry.getKey());
+                        qw.le("min_house_area", entry.getValue());
                     }
                 }
             }
@@ -83,28 +85,32 @@ public class HouseHousingService extends MybaseServiceImpl<HouseHousingMapper,Ho
                 if(entry.getValue()!=null && !"".equals(entry.getValue().toString())) {
                     if("latestSort".equals(entry.getKey())) {//最新倒序
                         qw.orderByDesc("latest");
+                        if("asc".equals(entry.getValue().toString())) qw.orderByAsc("latest");
+                        if("desc".equals(entry.getValue().toString()))qw.orderByDesc("latest");;
                     }
                     if("minUnitPriceSort".equals(entry.getKey())) {
-                        if("asc".equals(entry.getKey().toString())) qw.orderByAsc("min_unit_price");
-                        if("desc".equals(entry.getKey().toString())) qw.orderByDesc("min_unit_price");
+                        if("asc".equals(entry.getValue().toString())) qw.orderByAsc("min_unit_price");
+                        if("desc".equals(entry.getValue().toString())) qw.orderByDesc("min_unit_price");
                     }
                     if("minTotalPriceSort".equals(entry.getKey())) {
-                        if("asc".equals(entry.getKey().toString())) qw.orderByAsc("min_total_price");
-                        if("desc".equals(entry.getKey().toString())) qw.orderByDesc("min_total_price");
+                        if("asc".equals(entry.getValue().toString())) qw.orderByAsc("min_total_price");
+                        if("desc".equals(entry.getValue().toString())) qw.orderByDesc("min_total_price");
                     }
                     if("minHouseAreaSort".equals(entry.getKey())) {
-                        if("asc".equals(entry.getKey().toString())) qw.orderByAsc("min_house_area");
-                        if("desc".equals(entry.getKey().toString())) qw.orderByDesc("min_house_area");
+                        if("asc".equals(entry.getValue().toString())) qw.orderByAsc("min_house_area");
+                        if("desc".equals(entry.getValue().toString())) qw.orderByDesc("min_house_area");
                     }
                     if("openDateSort".equals(entry.getKey())) {
-                        if("asc".equals(entry.getKey().toString())) qw.orderByAsc("open_date");
-                        if("desc".equals(entry.getKey().toString())) qw.orderByDesc("open_date");
+                        if("asc".equals(entry.getValue().toString())) qw.orderByAsc("open_date");
+                        if("desc".equals(entry.getValue().toString())) qw.orderByDesc("open_date");
                     }
                 }
             }
         }
-
+        log.info("service_pageNo======="+pageNo);
         PageHelper.startPage(pageNo, pageSize);
+//        IPage<HouseHousing> page = new IPage<HouseHousing>();
+//        super.page(qw);
         List<HouseHousing> list = super.list(qw);
         PageInfo<HouseHousing> page = new PageInfo<HouseHousing>(list);
         return page;

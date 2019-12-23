@@ -19,9 +19,15 @@ public class Query extends LinkedHashMap<String, Object> {
         //分页参数
         if(params.get("pageNum")!=null) {
             this.pageNum = Integer.parseInt(params.get("pageNum").toString());
+            if(pageNum<=0){
+                pageNum = 1;
+            }
         }
         if(params.get("pageNo")!=null) {
             this.pageNum = Integer.parseInt(params.get("pageNo").toString());
+            if(pageNum<=0){
+                pageNum = 1;
+            }
         }
         if(params.get("pageSize")!=null) {
             this.pageSize = Integer.parseInt(params.get("pageSize").toString());

@@ -1,6 +1,7 @@
 package com.icloud.config.datasource;
 
 
+import com.baomidou.mybatisplus.entity.GlobalConfiguration;
 import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -25,6 +26,14 @@ public class MybatisPlusConfig {
      * mybatis-plus分页插件<br>
      * 文档：http://mp.baomidou.com<br>
      */
+
+
+    @Bean
+    public GlobalConfiguration globalConfiguration() {
+        GlobalConfiguration global = new GlobalConfiguration();
+        global.setDbType("mysql");
+        return global;
+    }
 
     /**
      * 配置mybatis的分页插件pageHelper

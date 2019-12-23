@@ -383,12 +383,17 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
-      <!--  <dependency>
+        <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>2.1.4</version>
+            <artifactId>mybatis-plus-support</artifactId>
+            <version>2.1.9</version>
         </dependency>
--->
+        <!--  <dependency>
+              <groupId>com.baomidou</groupId>
+              <artifactId>mybatis-plus</artifactId>
+              <version>2.1.4</version>
+          </dependency>
+  -->
         <!--热部署工具-->
        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
