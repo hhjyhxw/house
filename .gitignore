@@ -1,2 +1,4 @@
 /target/
-
+/src/test/
+/src/main/resources/application-dev.yml
+/src/main/resources/application-pro.yml
