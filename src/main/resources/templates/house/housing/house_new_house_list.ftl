@@ -111,6 +111,7 @@
                          </td>
                             <th>
                             <div class="layui-btn-group">
+                                 <a href="${request.contextPath}/backpage/houseShareItem/list?parentId=${t.id}"  class="layui-btn layui-btn-mini">详情头图</a>
                                  <a href="javascript:toEdit(${(t.id)!''})"  class="layui-btn layui-btn-mini">修改</a>
                                  <a href="javascript:delById(${(t.id)!''})"  class="layui-btn layui-btn-mini">删除</a>
                             </div>

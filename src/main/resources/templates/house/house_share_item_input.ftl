@@ -104,7 +104,7 @@
                            success:function(data) {
                              if("0000"==data.code){
                                layer.msg('保存成功',{time:2000})
-                               setTimeout(function(){window.location="${request.contextPath}/backpage/houseShareItem/list"},500);
+                               setTimeout(function(){window.location="${request.contextPath}/backpage/houseShareItem/list?parentId="+$("#parentId").val()},500);
                               }else{
                                   layer.msg(data.message,{time:2000})
                             }

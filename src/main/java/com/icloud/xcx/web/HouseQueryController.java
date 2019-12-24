@@ -106,19 +106,24 @@ public class HouseQueryController {
             HouseHousing house = null;
 
             if(houseHousing!=null){
+
                 house = (HouseHousing) houseHousing;
+
+                //子项列表
                 List<HouseShareItem> itemList = null;
-                if(house.getHouseType()!=null && 3==house.getHouseType().intValue()){//共享办公下的列表
-                    QueryWrapper queryWrapper = new QueryWrapper();
-                    queryWrapper.eq("parent_id",house.getId());
-                    itemList = houseShareItemService.list(queryWrapper);
-                    house.setItemList(itemList);
-                }else {
+                QueryWrapper queryWrapper = new QueryWrapper();
+                queryWrapper.eq("parent_id",house.getId());
+                itemList = houseShareItemService.list(queryWrapper);
+                if(itemList==null){
                     itemList = new ArrayList<HouseShareItem>();
+                }
+                //首页封面
+                if(house.getHouseType()!=null && 3!=house.getHouseType().intValue()){//非共享办公下 加如首页封面图
                     HouseShareItem houseShareItem = new HouseShareItem();
                     houseShareItem.setImageUrl(house.getImageUrl());
                     itemList.add(houseShareItem);
                 }
+                house.setItemList(itemList);
                 //保存或者更新我的足迹
                 if(user!=null && user.getId()!=null){
                     houseBrowseRecordsService.saveOrUpdate(house,user);
