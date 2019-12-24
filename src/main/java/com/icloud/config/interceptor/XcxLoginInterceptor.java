@@ -35,7 +35,7 @@ public class XcxLoginInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        log.info("======requestUri:",request.getRequestURI());
+        log.info("======requestUri:==="+ request.getRequestURI());
         AuthIgnore annotation;
         if(handler instanceof HandlerMethod) {
             annotation = ((HandlerMethod) handler).getMethodAnnotation(AuthIgnore.class);
