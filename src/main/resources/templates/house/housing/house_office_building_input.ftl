@@ -12,6 +12,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<link rel="stylesheet" href="${request.contextPath}/plugins/layui/css/layui.css" media="all" />
 		<link rel="stylesheet" href="${request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+		  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A23543b3be51778406429cba6b7d74c4"></script>
 	</head>
 
 	<body>
@@ -41,20 +42,7 @@
                  <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
           </div>
 
-         <div class="layui-form-item">
-            <label class="layui-form-label">所在区域</label>
-            <div class="layui-input-inline" style="width:70%">
-                 <select name="village" lay-verify="required" id="village">
-                    <option value="">--请选择--</option>
-                    <#if arenList??>
-                        <#list arenList as areaObj>
-                            <option value="${areaObj.areanName}"  <#if (record.village)?? && record.village==areaObj.areanName>selected="selected"</#if>>${areaObj.areanName}</option>
-                        </#list>
-                    </#if>
-                </select>
-              </div>
-            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
-        </div>
+
 
          <div class="layui-form-item">
             <label class="layui-form-label">售价/平方</label>
@@ -206,6 +194,46 @@
                     </div>
 
                     <div class="layui-form-item">
+                                    <label class="layui-form-label">所在区域</label>
+                                    <div class="layui-input-inline" style="width:70%">
+                                         <select name="village" lay-verify="required" id="village">
+                                            <option value="">--请选择--</option>
+                                            <#if arenList??>
+                                                <#list arenList as areaObj>
+                                                    <option value="${areaObj.areanName}"  <#if (record.village)?? && record.village==areaObj.areanName>selected="selected"</#if>>${areaObj.areanName}</option>
+                                                </#list>
+                                            </#if>
+                                        </select>
+                                      </div>
+                                    <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
+                                </div>
+
+                                 <div class="layui-form-item">
+                                    <label class="layui-form-label">详细地址</label>
+                                    <div class="layui-input-inline" style="width:70%">
+                                        <input type="text" name="addesses" lay-verify="required" id="address" value="${(record.addesses)!''}" placeholder="详细地址" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-form-mid layui-word-aux"><span style="color:red;">*输入详细地址，自动选择经纬度；点击地图自动选择经纬度和地址</span></div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">经度</label>
+                                    <div class="layui-input-inline" style="width:70%">
+                                        <input type="text" name="lng" lay-verify="required" id="longitude" value="${(record.lng)!''}" placeholder="经度" autocomplete="off" class="layui-input">
+                                    </div>
+                                    <div class="layui-form-mid layui-word-aux"><span style="color:red;">*输入详细地址，自动选择经纬度；点击地图自动选择经纬度和地址</span></div>
+                                </div>
+                                   <div class="layui-form-item">
+                                        <label class="layui-form-label">纬度</label>
+                                        <div class="layui-input-inline" style="width:70%">
+                                            <input type="text" name="lat" lay-verify="required" id="latitude" value="${(record.lat)!''}" placeholder="纬度" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-form-mid layui-word-aux"><span style="color:red;">*输入详细地址，自动选择经纬度；点击地图自动选择经纬度和地址</span></div>
+                                    </div>
+
+                    		    <div class="sright"><div id="allmap" style="width:500px; height:400px; overflow:hidden;border:1px solid #ccc; margin-top:25px;margin-left: auto;margin-right: auto;"></div></div>
+                        		<div style="clear:both;"></div>
+
+                    <div class="layui-form-item">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
@@ -307,6 +335,91 @@
                 });
             });
         </script>
+
+
+<script type="text/javascript">
+var latitudeBaiDu ;
+var longitudeBaiDu ;
+// 百度地图初始化
+var map = new BMap.Map("allmap");    // 创建Map实例
+	var point = new BMap.Point(114.05, 22.55); //深圳市
+	map.centerAndZoom(point, 13);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+var marker = new BMap.Marker(point);
+	map.addOverlay(marker);            //添加标注
+
+
+
+var geoc = new BMap.Geocoder();
+	//直接点击地图获取地址和经纬度
+	map.addEventListener("click", function(e){
+		var pt = e.point;
+		geoc.getLocation(pt, function(rs){
+			var addComp = rs.addressComponents;
+			var addressBaiDu =  addComp.city+ addComp.district+ addComp.street+ addComp.streetNumber;
+			<!--var addressBaiDu = addComp.province + addComp.city+ addComp.district+ addComp.street+ addComp.streetNumber;-->
+
+			$("#address").attr("value",addressBaiDu);
+		});
+			 latitudeBaiDu = e.point.lat;
+			 longitudeBaiDu = e.point.lng;
+		    $("#latitude").attr("value",latitudeBaiDu);
+			$("#longitude").attr("value",longitudeBaiDu);
+	});
+
+//直接输入地址，光标离开的时候，地址解析
+$("#address").blur(function(){
+
+	// 创建地址解析器实例
+	var myGeo = new BMap.Geocoder();
+	//获取到地址
+	var address = $("#address").val();
+		// 将地址解析结果显示在地图上,并调整地图视野
+		myGeo.getPoint(address, function(point){
+			if (point) {
+				map.centerAndZoom(point, 19);
+				map.addOverlay(new BMap.Marker(point));
+				//alert(point.lng+"和"+point.lat);
+				 latitudeBaiDu = point.lat;
+				 longitudeBaiDu = point.lng;
+			    $("#latitude").attr("value",latitudeBaiDu);
+				$("#longitude").attr("value",longitudeBaiDu);
+
+			}else{
+				alert("您选择地址没有解析到结果!");
+			}
+		}, "深圳市");
+
+});
+
+//直接输入地址，光标离开的时候，地址解析
+$("#village").change(function(){
+debugger;
+	// 创建地址解析器实例
+	var myGeo = new BMap.Geocoder();
+	//获取到地址
+	var address = $(this).val();
+		// 将地址解析结果显示在地图上,并调整地图视野
+		myGeo.getPoint(address, function(point){
+			if (point) {
+				map.centerAndZoom(point, 19);
+				map.addOverlay(new BMap.Marker(point));
+				//alert(point.lng+"和"+point.lat);
+				 latitudeBaiDu = point.lat;
+				 longitudeBaiDu = point.lng;
+			    $("#latitude").attr("value",latitudeBaiDu);
+				$("#longitude").attr("value",longitudeBaiDu);
+              $("#address").attr("value",address);
+			}else{
+				alert("您选择地址没有解析到结果!");
+			}
+		}, "深圳市");
+
+});
+
+
+</script>
 
 	</body>
 </html>
