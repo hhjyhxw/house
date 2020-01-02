@@ -70,7 +70,7 @@ id,house_id,create_time,user_id
     </sql>
 
     <select id="findForList" parameterType="java.util.Map" resultMap="HoueBaseResultMap">
-        select h.* from t_house_housing h,t_house_follow_records b
+        select h.* from t_house_housing h,t_house_browse_records b
         <where>
             h.id = b.house_id
             <if test="userId != null" >

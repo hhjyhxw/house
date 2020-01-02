@@ -294,7 +294,11 @@ public class BaiduMapUtil {
         String[] o1 = getAddr("114.35047403624727","22.71623346474869");
         System.out.println(o1[0]);
         System.out.println(o1[1]);
-
+        try {
+            System.out.println("============="+URLEncoder.encode("广东省深圳市龙岗区丹梓西路","UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         System.out.println();
     }
 }
