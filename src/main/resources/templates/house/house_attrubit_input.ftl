@@ -18,13 +18,7 @@
 			<legend><#if (record.id)??>编辑<#else>添加</#if></legend>
 			<div class="layui-form-item">
 		  	</div>
-                                   <div class="layui-form-item">
-            <label class="layui-form-label">所属房屋信息</label>
-            <div class="layui-input-inline" style="width:70%">
-                <input type="text" name="houseId" lay-verify="required" id="houseId" value="${(record.houseId)!''}" placeholder="" autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
-        </div>
+
                              <div class="layui-form-item">
             <label class="layui-form-label">属性名</label>
             <div class="layui-input-inline" style="width:70%">
@@ -39,10 +33,11 @@
             </div>
             <div class="layui-form-mid layui-word-aux"><span style="color:red;">*</span></div>
         </div>
-            		  	<div class="layui-form-item">
+            <div class="layui-form-item">
 			    <div class="layui-input-block">
 					<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
 				    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+				     <a href="javascript:history.go(-1);" class="layui-btn">返回</a>
 			    </div>
 		  	</div>
 		</fieldset>

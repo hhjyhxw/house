@@ -51,10 +51,10 @@
             <form action="${request.contextPath}/backpage/houseAttrubit/list" id="formId" style="padding-left:33px;">
                  <ul class="findTool">
                      <input type="hidden" id="pageNum" name="pageNum" value="${page.pageNum}">
-                     <li> 名称： <input type="text" name="name" id="name"  value="${page.pageNum}" placeholder="" autocomplete="off" ></li>
+                     <li> 属性名称： <input type="text" name="name" id="name"  value="${(record.name)!}" placeholder="" autocomplete="off" ></li>
                      </li>
-                     <li>开始时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="startTime" name="startTime" value="${(start)!''}"></li>
-                     <li>结束时间<input type="text" onclick="layui.laydate({elem: this, istime: true, format: 'YYYY-MM-DD hh:mm:ss'})" id="endTime" name="endTime" value="${(end)!''}"></li>
+                     <li> 属性值： <input type="text" name="value" id="value"  value="${(record.value)!}" placeholder="" autocomplete="off" ></li>
+                                          </li>
                      <li><button id="search" >查询</button></li>
                      <li style="margin-left: 30px;height: 39px;margin-top: 2.5px;">
                         <a href="javascript:void();" id="toAdd" class="layui-btn layui-btn-small">
@@ -72,7 +72,6 @@
                     <thead>
                         <tr>
                          <th>id</th>
-                         <th>所属房屋信息</th>
                          <th>属性名</th>
                          <th>属性值</th>
                         <th>操作</th>
@@ -82,7 +81,6 @@
                     <#list page.list as t>
                         <tr>
                          <td>${t.id!''}</td>
-                         <td>${t.houseId!''}</td>
                          <td>${t.name!''}</td>
                          <td>${t.value!''}</td>
             

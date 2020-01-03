@@ -80,7 +80,9 @@
                     <#list page.list as t>
                         <tr>
                          <td>${t.id!''}</td>
-                         <td>${t.imageUrl!''}</td>
+                         <td>
+                             <img  style="width:300px;height:200px;" src="${request.contextPath}${t.imageUrl!''}" />
+                         </td>
                          <td>${t.itemname!''}</td>
                          <td>${t.price!''}</td>
                             <th>
